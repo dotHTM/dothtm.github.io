@@ -5,7 +5,7 @@ title:  Super Useful Links
 
 Links that I have found to be immensely useful to me over my years.
 
-## Down for everyone or just me
+## Down For Everyone Or Just Me
 
 <http://downforeveryoneorjustme.com>
 
