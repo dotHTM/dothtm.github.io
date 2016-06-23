@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dotHTM&#39;s github</title>
+    <description>Hello world.
+</description>
+    <link>http://dothtm.github.io/</link>
+    <atom:link href="http://dothtm.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 23 Jun 2016 14:27:40 -0500</pubDate>
+    <lastBuildDate>Thu, 23 Jun 2016 14:27:40 -0500</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Hello world</title>
+        <description>&lt;p&gt;What’s going on everybody?&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 Jun 2016 14:27:13 -0500</pubDate>
+        <link>http://dothtm.github.io/blog/2016/06/23/Hello-World.html</link>
+        <guid isPermaLink="true">http://dothtm.github.io/blog/2016/06/23/Hello-World.html</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+  </channel>
+</rss>
