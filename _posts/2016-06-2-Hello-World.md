@@ -6,3 +6,5 @@ categories: blog
 ---
 
 What's going on everybody?
+
+Testing a Ulysses edit saved via Git2Go
