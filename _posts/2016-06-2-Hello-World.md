@@ -7,4 +7,8 @@ categories: blog
 
 What's going on everybody?
 
+
 Testing an edit in Working Copy iOS.
+
+Testing a Ulysses edit saved via Git2Go
+
