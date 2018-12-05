@@ -9,6 +9,7 @@ services:
       - "4000:4000"
     volumes:
       - "./:/app/static_src/"
+    entrypoint: ash /jekyll_entry.sh
 
   grunt:
     image: dothtm/alpine_jekyll_grunt
@@ -19,4 +20,5 @@ services:
       - "35729:35729"
     volumes:
       - "./:/app/static_src/"
+    entrypoint: ash /grunt_entry.sh
 
