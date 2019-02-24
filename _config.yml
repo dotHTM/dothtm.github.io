@@ -6,14 +6,15 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: dotHTM's github
+title: dotHTM.github.io
 email: imanerd [at] me [dot] com
 description: > # this means to ignore newlines until "baseurl:"
-  Hello world.
+  
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://dothtm.github.io" # the base hostname & protocol for your site
 twitter_username: dothtm
 github_username:  dothtm
+mastodon_username:  dothtm
 
 # Build settings
 markdown: kramdown

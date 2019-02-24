@@ -91,15 +91,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        
     }
 
     &:hover {
-        color: $text-color;
+        
         text-decoration: underline;
     }
 }
@@ -160,8 +160,8 @@ pre {
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+    // padding-right: $spacing-unit;
+    // padding-left: $spacing-unit;
     @extend %clearfix;
 
     @include media-query($on-laptop) {
@@ -170,6 +170,13 @@ pre {
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }
+    
+    background: #fff1;
+// filter: brightness(140%);
+
+  padding: $spacing-unit 2*$spacing-unit ;
+
+
 }
 
 
