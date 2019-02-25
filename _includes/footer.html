@@ -1,9 +1,6 @@
-<footer class="site-footer">
-
+<footer id="site-footer">
   <div class="wrapper">
-
     <h2 class="footer-heading">{{ site.title }}</h2>
-
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
@@ -11,26 +8,28 @@
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
       </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          <li>
-          <span class="icon">  {% include icon-github.svg %} <a href="https://github.com/dothtm">Github</a> </span>
-          </li>
-          <li>
-           <span class="icon"> {% include icon-twitter.svg %} <a href="https://twitter.com/dothtm">Twitter</a></span>
-          </li>
-          <li>
-          <span class="icon"> {% include icon-mastodon.svg %} <a rel="me" href="https://mastodon.social/@dotHTM">Mastodon</a></span>
-          </li>
-        </ul>
+      
+      <div class="linklist">
+        <div class="linklist-link" style="max-width:48pt;">
+          <a href="https://github.com/dothtm"  alt="Github Repos"> 
+          {% include icon/roundrect/github.svg %}
+          </a>
+        </div>
+        <div class="linklist-link" style="max-width:48pt;">
+          <a href="https://twitter.com/dothtm" alt="Twitter"> 
+            {% include icon/roundrect/twitter.svg %}
+          </a>
+        </div>
+        <div class="linklist-link" style="max-width:48pt;">
+          <a rel="me" href="https://mastodon.social/@dotHTM"  alt="Mastodon"> 
+           {% include icon/roundrect/mastodon.svg %}
+          </a>
+        </div>
       </div>
-
+      
       <div class="footer-col footer-col-3">
         <p>{{ site.description }}</p>
       </div>
     </div>
-
   </div>
-
 </footer>

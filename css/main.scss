@@ -13,7 +13,7 @@ $base-font-weight: 400;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit: 30px;
+$spacing-unit: 0px;
 
 $text-color: #fff;
 $background-color: #111;
@@ -54,8 +54,8 @@ $on-laptop: 800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import 
-"module",
-"base",
-"layout",
-"syntax-highlighting"
+"module"
+,"base"
+,"layout"
+,"syntax-highlighting"
 ;

@@ -3,6 +3,8 @@ layout: post
 title:  "Mobile IDE"
 date:   2016-07-07T11:00:03-05:00
 categories: blog
+desc:
+    Proident sed ullamco qui aliquip sed labore occaecat quis reprehenderit dolor occaecat duis in officia laborum consequat aliqua quis aliqua proident culpa dolore sunt eu ex et cupidatat veniam ut tempor.
 ---
 
 Is it possible to code effectively on an iOS platform, specifically an iPad Pro w/ Keyboard case?

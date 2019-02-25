@@ -3,6 +3,8 @@ title: "A Tour of my very complicated bashrc files"
 date: "2018-12-20T11:12:29-06:00"
 layout: post
 categories: blog
+desc:
+    Sharing dot-files is a wonderful practice amongst developers and sysadmins for open mentorship that encourages people to stumble across features and settings they didn't realize their tools already possessed. Sort of like how machinists trade stories and tips, how to "get around the math" of some geometry problem (that ironically makes that math more intuitive if they ever came back).
 ---
 
 Sharing dot-files is a wonderful practice amongst developers and sysadmins for open mentorship that encourages people to stumble across features and settings they didn't realize their tools already possessed. Sort of like how machinists trade stories and tips, how to "get around the math" of some geometry problem (that ironically makes that math more intuitive if they ever came back).
