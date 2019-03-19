@@ -186,6 +186,13 @@ header {
 
 article {
 
+  p, ul, ol {
+  
+  margin-left: 5rem;
+  
+  }
+  
+  
   h1,
   h2 {
     @include rhombus;
