@@ -1,0 +1,40 @@
+---
+title: Miki
+layout: page
+permalink: /miki/
+bullet: ❖
+---
+
+{% capture interval %}{{ 432000 }}{% endcapture %}
+
+<div class="home">
+  <ul class="post-list">
+    {% for page in site.pages %}
+    {%if page.layout == 'miki' %}
+    <li>
+      <h2>
+        <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{%if page.bullet%}{{page.bullet }}{%else%}⇲{%endif%} {{ page.title }}</a>
+         
+{% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+{% capture updated_at %}{{page.updated | date: '%s'}}{% endcapture %}
+{% capture expire_update_notice %}{{ updated_at | plus: interval }}{% endcapture %}
+
+
+{% if page.updated %}
+{% if nowunix < expire_update_notice %}
+         -<span class="post-meta">Updated {{ page.updated | date: "%b %-d, %Y" }}</span>
+         {%endif%}
+    {%endif%}
+      </h2>
+      
+      {% if page.desc %}<p class="post-desc">{{page.desc}}</p>{% endif %}
+    </li>
+    {%else%}
+    <!-- <li>
+      {{ page.title }} - <div>nope</div>
+    </li> -->
+    {%endif%}
+    {% endfor %}
+  </ul>
+</div>
+

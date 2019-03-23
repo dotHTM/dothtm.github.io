@@ -1,8 +1,11 @@
 ---
-layout: page
 title: Toolbox
+layout: miki
 permalink: /miki/toolbox/
 bullet: ⌨︎
+updated: 2019-03-23
+desc:
+    Tools I like, software I use, things I pay good money for.
 ---
 
 # Web Tools
@@ -15,9 +18,9 @@ There once was a social network that had me 100% consumed, and then one day, Goo
 
 Ironically, another "Reeder" recommended Feedbin as a sync service, and after a lot of frustration of app syncing and feature neglect, I've actually decided that 99.999% of the time, I'd rather be on the web interface of Feedbin.
 
-With it, I've categorized all manner of blogs, comics, creators, twitter lists, and newspapers. This is how I keep up to date with websites I care about, it might as well be my "inbox for the web".
+With it, I've categorized all manner of blogs, comics, creators, twitter lists, and newspapers. This is how I keep up to date with websites I care about, it might as well be my "in-box for the web".
 
-Tags, Saved Searches, Notification and "merk as read" Actions, RSS feed of starred items can be chained into IFTTT or recursively fed back into Feedbin...
+Tags, Saved Searches, Notification and "mark as read" Actions, RSS feed of starred items can be chained into IFTTT or recursively fed back into Feedbin...
 
 Great reading experience.
 
@@ -61,5 +64,5 @@ Quickly check if a site is down or maybe there's a problem with your local confi
 
 <https://istheinternetdown.com>
 
-Grab your IP and makde sure that caching isn't tricking you (random color in background everytime).
+Grab your IP and make sure that caching isn't tricking you (random color in background every time).
 

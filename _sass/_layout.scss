@@ -1,14 +1,14 @@
 $spacing-unit: 20px;
 
 
-$theme_violet: hsl(260, 100%, 10%);
-$theme_green: #0f0;
-$theme_green_dark: hsl(130, 100%, 10%);
-$theme_pink: hotpink;
-$theme_yellow: lighten(yellow, 35%);
-$text_color: rgba($theme_yellow, 70%);
-$subdue_color: rgba($theme_yellow, 50%);
-$blockquote_color: rgba($theme_yellow, 15%);
+$violet: hsl(260, 100%, 10%);
+$green: lime;
+$green_dark: hsl(130, 100%, 10%);
+$pink: hotpink;
+$yellow: lighten(yellow, 35%);
+$text_color: rgba($yellow, 70%);
+$subdue_color: rgba($yellow, 50%);
+$blockquote_color: rgba($yellow, 15%);
 
 $stripe_wide: 30px;
 $stripe_edge: 15px;
@@ -36,16 +36,16 @@ body {
 
 
     linear-gradient(0deg,
-    rgba(hotpink, 20%),
+    rgba($pink, 20%),
     transparent,
     rgba(cyan, 20%),
     ),
     repeating-linear-gradient(-$stripe-angle,
-    lighten($theme_violet, 5%),
-    lighten($theme_violet, 5%) $stripe_wide,
-    lighten($theme_violet, 10%) $stripe_wide + $stripe_edge,
-    lighten($theme_violet, 10%) 2*$stripe_wide + $stripe_edge,
-    lighten($theme_violet, 5%) 2*$stripe_wide + 2*$stripe_edge,
+    lighten($violet, 5%),
+    lighten($violet, 5%) $stripe_wide,
+    lighten($violet, 10%) $stripe_wide + $stripe_edge,
+    lighten($violet, 10%) 2*$stripe_wide + $stripe_edge,
+    lighten($violet, 5%) 2*$stripe_wide + 2*$stripe_edge,
     ),
   ;
   background-blend-mode: lighten;
@@ -55,7 +55,7 @@ body {
 
 .wrapper {
   color: $text_color;
-  background: $theme_violet;
+  background: $violet;
   box-shadow: 0px 5px 10px 2px black;
 }
 
@@ -65,7 +65,7 @@ body {
 
 header {
   .wrapper {
-    background: darken($theme_violet, 4%);
+    background: darken($violet, 4%);
   }
 
 
@@ -75,11 +75,11 @@ header {
     float: left;
 
     .dot {
-      color: $theme_pink;
+      color: $pink;
     }
 
     .htm {
-      color: $theme_green;
+      color: $green;
     }
 
     .platform {
@@ -121,7 +121,7 @@ header {
 
 
   .divider {
-    color: $theme_pink;
+    color: $pink;
   }
 
   a {
@@ -129,7 +129,7 @@ header {
     text-decoration: none;
 
     #site-title {
-      color: $theme_pink;
+      color: $pink;
 
     }
 
@@ -150,21 +150,44 @@ header {
 
     &:hover,
     &:hover:visited {
-      color: $theme_green;
+      color: $green;
     }
 
     &:visited {
-      color: darken($theme_green, 10%);
+      color: darken($green, 10%);
     }
   }
+
+  strong {
+    font-weight: 900;
+    font-size: 1.2em;
+
+    color: cyan;
+
+    -webkit-text-fill-color: $violet;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: cyan;
+  }
+  
+  emphasis {
+    // font-weight: 900;
+    font-size: 1.2em;
+
+    color: $pink;
+
+    -webkit-text-fill-color: $violet;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: cyan;
+  }
+
 }
 
 
 
 @mixin bi_light_1 {
   background: repeating-linear-gradient(90deg,
-    lighten($theme_violet, 4%),
-    darken($theme_pink, 50%) 100%,
+    lighten($violet, 4%),
+    darken($pink, 50%) 100%,
     ),
     repeating-linear-gradient(0deg,
     transparent,
@@ -176,12 +199,12 @@ header {
 @mixin bi_light_2 {
   background:
     repeating-linear-gradient(0deg,
-    lighten($theme_violet, 4%),
-    darken($theme_green, 35%) 100%,
+    lighten($violet, 4%),
+    darken($green, 35%) 100%,
     ),
     repeating-linear-gradient(-90deg,
     transparent,
-    rgba($theme_pink, 20%) 100%,
+    rgba($pink, 20%) 100%,
     );
   background-blend-mode: lighten;
 }
@@ -189,12 +212,12 @@ header {
 @mixin bi_light_3 {
   background:
     repeating-linear-gradient(90deg,
-    lighten($theme_violet, 4%),
+    lighten($violet, 4%),
     darken(cyan, 35%) 100%,
     ),
     repeating-linear-gradient(180deg,
     transparent,
-    rgba($theme_pink, 20%) 100%,
+    rgba($pink, 20%) 100%,
     );
   background-blend-mode: lighten;
 }
@@ -224,7 +247,7 @@ article {
 
 
   .post-header {
-    // background: $theme_green_dark;
+    // background: $green_dark;
 
     @include bi_light_3;
     font-size: 2rem;
@@ -253,7 +276,7 @@ article {
     .post-meta {
       font-weight: 900;
       font-size: large;
-      color: hotpink;
+      color: $pink;
       margin-left: $margin_spacer/4;
     }
 
@@ -344,23 +367,31 @@ article {
     h2 {
       font-size: 1.5rem;
       @include rhombus_short;
-      
-$text_color: $theme_green;
+      padding: 0.67rem 1.5rem;
+      $text_color: $green;
       color: $text_color;
       border: 4px $text_color solid;
     }
-    
+
 
     h3 {
       @include rhombus_short;
-      padding: 0.5rem;
+      padding: 0.5rem 1rem;
       margin-left: $margin_spacer;
-      $text_color: $theme_pink;
-color: $text_color;
-border: 4px $text_color solid;
+      $text_color: $pink;
+      color: $text_color;
+      border: 4px $text_color solid;
     }
 
-    h4,
+    h4 {
+      @include rhombus_short;
+      padding: 0.5rem;
+      margin-left: $margin_spacer*2;
+      $text_color: cyan;
+      color: $text_color;
+      border: 4px $text_color solid;
+    }
+
     h5,
     h6 {}
   }
@@ -368,12 +399,13 @@ border: 4px $text_color solid;
 
 
 ul.post-list {
-  
+
   margin-left: 0 !important;
   padding-left: 0 !important;
-  
-    
+
+
   list-style-type: none;
+
   a {
 
     &:hover,
@@ -410,12 +442,12 @@ ul.post-list {
 
 footer {
   .wrapper {
-    background: darken($theme_violet, 4%);
+    background: darken($violet, 4%);
     // filter: brightness(50%);
   }
 
   .linklist-link * {
-    fill: $theme_green;
+    fill: $green;
   }
 }
 

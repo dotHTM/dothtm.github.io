@@ -3,7 +3,6 @@ title: "New look, new beginings"
 subtitle: "a reason for me to write again"
 date: "2019-03-23"
 
-categories: blog
 layout: post
 
 desc:
@@ -52,14 +51,14 @@ Sounds like a nice way to learn a lot of lessons about game development [without
 
 A DBI wrapper for cross host/server, cross database, relational MySQL/MariaDB data with data caching and pre-emptive table query rules.
 
-Why not just use an existing library like NoSQL? I paid employement is in Perl, and I deal with a lot of cross-server situations where relational structure may not be configured.
+Why not just use an existing library like NoSQL? My paid employement is in Perl, and I deal with a lot of cross-server situations where relational structure may not be configured.
 
-Progress:
+#### Progress:
 
 - Basics: connecting through making individual raw SQL querys
 - an alternative to native hash-arrays that provides indexing on given column names (for table storage/retrieval)
 
-Future:
+#### Future:
 
 - input data sanitization
     - distinction between values passed as raw or need to be internally wrapped
