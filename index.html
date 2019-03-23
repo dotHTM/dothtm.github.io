@@ -1,27 +1,21 @@
 ---
 layout: page
-title: 
-bullet: 
+title:
+bullet:
 hide_title: true
 ---
-
 <div class="home">
-
-
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        </h2>
-        
-        {% if post.desc %}<p class="post-desc">{{post.desc}}</p>{% endif %}
-        
-        <p><a class="post-desc" href="{{ post.url | prepend: site.baseurl }}">…</a></p>
-      </li>
+    <li>
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      </h2>
+      <p class="post-desc">
+        {% if post.desc %}{{post.desc}}{% endif %} <a class="post-desc" href="{{ post.url | prepend: site.baseurl }}">…</a>
+      </p>
+    </li>
     {% endfor %}
   </ul>
-
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>
