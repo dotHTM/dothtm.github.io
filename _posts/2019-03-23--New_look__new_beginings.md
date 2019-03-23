@@ -29,7 +29,7 @@ So "clever" software be damned, and it's better to have "dumb" static pages buil
 
 ## Games
 
-## Dragon Fractal Tutor
+### Dragon Fractal Tutor
 
 My first passion software project. I wrote the first logic durring my investigation of the dragon fractal in the late 90's in high school in Borland C.
 
