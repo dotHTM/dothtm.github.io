@@ -11,8 +11,9 @@
           
           <nav id="site-nav">
             <span class="divider">|</span>
-            {% for my_page in site.pages %}
-            {% if my_page.error %}{% else %}
+            {% assign sorted_pages = site.pages | sort: "nav" %}
+            {% for my_page in sorted_pages %}
+            {% if my_page.nav %}
             {% if my_page.title %}
             <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a> <span class="divider">|</span>
             {% endif %}

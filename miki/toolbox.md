@@ -4,6 +4,7 @@ layout: miki
 permalink: /miki/toolbox/
 bullet: ⌨︎
 updated: 2019-03-23
+nav: 500
 desc:
     Tools I like, software I use, things I pay good money for.
 ---

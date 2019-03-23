@@ -1,0 +1,106 @@
+$spacing-unit: 20px;
+
+$logo_size : 256px;
+
+$violet: hsl(260, 100%, 10%);
+$green: lime;
+$green_dark: hsl(130, 100%, 10%);
+$pink: hotpink;
+$yellow: lighten(yellow, 35%);
+$text_color: rgba($yellow, 70%);
+$subdue_color: rgba($yellow, 50%);
+$blockquote_color: rgba($yellow, 15%);
+
+$stripe_wide: 30px;
+$stripe_edge: 15px;
+
+$slant_angle: 17deg;
+$slant_angle2: 7deg;
+
+$stripe-angle: 90deg+$slant_angle;
+
+
+@mixin bi_light_1 {
+  background: repeating-linear-gradient(90deg,
+    lighten($violet, 4%),
+    darken($pink, 50%) 100%,
+    ),
+    repeating-linear-gradient(0deg,
+    transparent,
+    rgba(yellow, 20%) 100%,
+    );
+  background-blend-mode: lighten;
+}
+
+@mixin bi_light_2 {
+  background:
+    repeating-linear-gradient(0deg,
+    lighten($violet, 4%),
+    darken($green, 35%) 100%,
+    ),
+    repeating-linear-gradient(-90deg,
+    transparent,
+    rgba($pink, 20%) 100%,
+    );
+  background-blend-mode: lighten;
+}
+
+@mixin bi_light_3 {
+  background:
+    repeating-linear-gradient(90deg,
+    lighten($violet, 4%),
+    darken(cyan, 35%) 100%,
+    ),
+    repeating-linear-gradient(180deg,
+    transparent,
+    rgba($pink, 20%) 100%,
+    );
+  background-blend-mode: lighten;
+}
+
+@mixin bi_light_3 {
+  background:
+    repeating-linear-gradient(90deg,
+    lighten($violet, 14%),
+    darken(cyan, 25%) 100%,
+    ),
+    repeating-linear-gradient(180deg,
+    transparent,
+    rgba($pink, 40%) 100%,
+    );
+  background-blend-mode: lighten;
+}
+
+@mixin logo_body {
+  // border-radius: $logo_size/4;
+  padding: 1rem 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+
+
+.logo {
+
+
+  @include logo_body;
+  @include bi_light_3;
+
+  height: $logo_size;
+  width: $logo_size;
+  margin: 2rem;
+  padding: 0;
+  display: table;
+
+  text-align: center;
+
+  .element {
+    font-size: 64pt;
+    font-family: Monospace;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+  }
+}

@@ -1,8 +1,9 @@
 ---
 layout: miki
 title: About
-permalink: /about/
+permalink: /miki/about/
 bullet: '#'
+nav: 100
 desc: 
     Links and Description!
 ---
@@ -18,4 +19,4 @@ Dog father. Amateur noise maker.
 - [GitHub](https://github.com/dothtm)
 - [Soundcloud](https://soundcloud.com/dothtm)
 
-
+Join my [Discord Server](https://discord.gg/VP9SHSc)!
