@@ -49,7 +49,7 @@ I wanted my prompt customizations to live separately from my aliases, exports, p
 
 Custom `git clone` locations are discovered through a trick found on one of the [Stack Overflow](google.com) sites:
 
-```
+```sh
 PROFILE_DIR=$( cd $( dirname ${BASH_SOURCE[0]} ) && pwd )
 ```
 

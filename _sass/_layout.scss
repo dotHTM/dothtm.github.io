@@ -4,8 +4,10 @@ $spacing-unit: 20px;
 $theme_violet: hsl(260, 100%, 10%);
 $theme_green: #0f0;
 $theme_pink: hotpink;
-$text_color: rgba(lighten(yellow, 35%), 70%);
-$subdue_color: rgba(lighten(yellow, 35%), 50%);
+$theme_yellow: lighten(yellow, 35%);
+$text_color: rgba($theme_yellow, 70%);
+$subdue_color: rgba($theme_yellow, 50%);
+$blockquote_color: rgba($theme_yellow, 15%);
 
 $stripe_wide: 30px;
 $stripe_edge: 15px;
@@ -180,7 +182,9 @@ header {
     );
   background-blend-mode: lighten;
   transform: skew(-$slant_angle2);
+
 }
+
 
 @mixin rhombus_alt {
   border-radius: .5rem;
@@ -203,34 +207,112 @@ header {
   transform: skew(-$slant_angle2);
 }
 
-
-
-
 h1.page-heading{
   @include rhombus_alt;
 }
 
+
 article {
 
-  h1{
-    @include rhombus;
+$margin_spacer: 5rem;
+
+  .post-meta {
+    font-weight: 900;
+    font-size: large;
+    color: hotpink;
+    margin-left: $margin_spacer/4;
   }
 
+p {
+  text-indent: $margin_spacer/2;
+}
+
+  p,
+  ul,
+  ol {
+    margin-left: $margin_spacer;
+    margin-right: $margin_spacer/2;
+    line-height: 1.7em;
+    margin-bottom: 2em;
+  }
+
+  blockquote>* {
+    margin: 0;
+    padding: 0;
+  }
+
+  blockquote,
+  pre {
+    margin-left: $margin_spacer * 3/2;
+    margin-right: $margin_spacer/2;
+    margin-top: $margin_spacer/2;
+    margin-bottom: $margin_spacer/2;
+
+
+    line-height: 1.5em;
+    padding: 1em;
+
+    background: $blockquote_color;
+  }
+
+  $blockquote_border_width : 4px;
+
+  blockquote {
+    border-left: $blockquote_border_width cyan solid;
+  }
+
+
+
+  pre {
+    border-left: $blockquote_border_width red solid;
+  }
+
+p code{
+  background: $blockquote_color;
+  padding: 0.2em;
+    color: white;
+
+}
+
+  // pre span {
+  //   display: block;
+  // }
+
+  // pre span:before {
+  //   counter-increment: line;
+  //   content: counter(line);
+  //   display: inline-block;
+  //   border-right: 1px solid #ddd;
+  //   padding: 0 .5em;
+  //   margin-right: .5em;
+  //   color: #888
+  // }
+
+
+
+  h1 {
+        margin-left: $margin_spacer * 1/3;
+    @include rhombus;
+  }
+  
   h2 {
     @include rhombus_alt;
   }
 
-  h1{
+  h1 {
     font-size: 2rem;
   }
 
-  h2{
+  h2 {
     font-size: 1.5rem;
     margin-left: 3rem;
   }
 
-  h3, h4, h5, h6{
-      margin-left: 3rem;
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-left: 3rem;
   }
 
 }
@@ -255,10 +337,15 @@ ul.post-list {
 
   li {
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       background: #fff2;
-        border-radius: .5rem;
-        padding: .5rem;
+      border-radius: .5rem;
+      padding: .5rem;
 
     }
 
