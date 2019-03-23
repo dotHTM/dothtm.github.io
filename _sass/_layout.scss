@@ -1,9 +1,9 @@
 $spacing-unit: 20px;
 
 
-$theme_back: hsl(260, 100%, 10%);
-$theme_color: #0f0;
-$theme_alt: hotpink;
+$theme_violet: hsl(260, 100%, 10%);
+$theme_green: #0f0;
+$theme_pink: hotpink;
 $text_color: rgba(lighten(yellow, 35%), 70%);
 $subdue_color: rgba(lighten(yellow, 35%), 50%);
 
@@ -38,11 +38,11 @@ body {
     rgba(cyan, 20%),
     ),
     repeating-linear-gradient(-$stripe-angle,
-    lighten($theme_back, 5%),
-    lighten($theme_back, 5%) $stripe_wide,
-    lighten($theme_back, 10%) $stripe_wide + $stripe_edge,
-    lighten($theme_back, 10%) 2*$stripe_wide + $stripe_edge,
-    lighten($theme_back, 5%) 2*$stripe_wide + 2*$stripe_edge,
+    lighten($theme_violet, 5%),
+    lighten($theme_violet, 5%) $stripe_wide,
+    lighten($theme_violet, 10%) $stripe_wide + $stripe_edge,
+    lighten($theme_violet, 10%) 2*$stripe_wide + $stripe_edge,
+    lighten($theme_violet, 5%) 2*$stripe_wide + 2*$stripe_edge,
     ),
   ;
   background-blend-mode: lighten;
@@ -52,7 +52,7 @@ body {
 
 .wrapper {
   color: $text_color;
-  background: $theme_back;
+  background: $theme_violet;
   box-shadow: 0px 5px 10px 2px black;
 }
 
@@ -65,7 +65,7 @@ header {
 
   .wrapper {
 
-    background: darken($theme_back, 4%);
+    background: darken($theme_violet, 4%);
     // filter: brightness(50%);
   }
 
@@ -76,11 +76,11 @@ header {
     float: left;
 
     .dot {
-      color: $theme_alt;
+      color: $theme_pink;
     }
 
     .htm {
-      color: $theme_color;
+      color: $theme_green;
     }
 
     .platform {
@@ -125,7 +125,7 @@ header {
 
 
   .divider {
-    color: $theme_alt;
+    color: $theme_pink;
   }
 
   a {
@@ -133,7 +133,7 @@ header {
     text-decoration: none;
 
     #site-title {
-      color: $theme_alt;
+      color: $theme_pink;
 
     }
 
@@ -154,11 +154,11 @@ header {
 
     &:hover,
     &:hover:visited {
-      color: $theme_color;
+      color: $theme_green;
     }
 
     &:visited {
-      color: darken($theme_color, 10%);
+      color: darken($theme_green, 10%);
     }
   }
 }
@@ -171,8 +171,8 @@ header {
   margin-bottom: 2rem;
 
   background: repeating-linear-gradient(90deg,
-    lighten($theme_back, 4%),
-    darken($theme_alt, 50%) 100%,
+    lighten($theme_violet, 4%),
+    darken($theme_pink, 50%) 100%,
     ),
     repeating-linear-gradient(0deg,
     transparent,
@@ -180,43 +180,58 @@ header {
     );
   background-blend-mode: lighten;
   transform: skew(-$slant_angle2);
-
 }
 
+@mixin rhombus_alt {
+  border-radius: .5rem;
+  padding: 1rem 1rem 1rem 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      lighten($theme_violet, 4%),
+      darken($theme_green, 35%) 100%,
+    ),
+    repeating-linear-gradient(-90deg,
+      transparent,
+      rgba($theme_pink, 20%) 100%,
+    );
+  background-blend-mode: lighten;
+  transform: skew(-$slant_angle2);
+}
+
+
+
+
+h1.page-heading{
+  @include rhombus_alt;
+}
 
 article {
 
-  .post-meta {
-font-weight: 900;
-font-size: large;
-color: hotpink;
-}
-  
-  p, ul, ol {
-    margin-left: 5rem;
-    margin-right: 2rem;
-    line-height: 1.5em;
-  }
-  
-  
-  h1,
-  h2 {
     @include rhombus;
   }
-  
+
+  h2 {
+    @include rhombus_alt;
+  }
+
   h1{
     font-size: 2rem;
   }
-  
+
   h2{
     font-size: 1.5rem;
     margin-left: 3rem;
   }
-  
+
   h3, h4, h5, h6{
       margin-left: 3rem;
   }
-  
+
 }
 
 
@@ -254,12 +269,12 @@ ul.post-list {
 
 footer {
   .wrapper {
-    background: darken($theme_back, 4%);
+    background: darken($theme_violet, 4%);
     // filter: brightness(50%);
   }
 
   .linklist-link * {
-    fill: $theme_color;
+    fill: $theme_green;
   }
 }
 
