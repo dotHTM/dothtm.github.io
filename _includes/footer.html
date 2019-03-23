@@ -8,30 +8,33 @@
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
       </div>
-      
-      <div class="linklist">
-        <div class="linklist-link" style="max-width:48pt;">
-          <a href="https://github.com/dothtm"  alt="Github Repos"> 
-          {% include icon/roundrect/github.svg %}
-          </a>
+        <div class="linklist">
+          <div class="linklist-link" style="max-width:48pt;">
+            <a class="github" href="https://github.com/dothtm" alt="Github Repos">
+              {% include icon/roundrect/github.svg %}
+            </a>
+          </div>
+          <div class="linklist-link" style="max-width:48pt;">
+            <a class="twitter" href="https://twitter.com/dothtm" alt="Twitter">
+              {% include icon/roundrect/twitter.svg %}
+            </a>
+          </div>
+          <div class="linklist-link" style="max-width:48pt;">
+            <a class="mastodon" href="https://mastodon.social/@dotHTM" alt="Mastodon">
+              {% include icon/roundrect/mastodon.svg %}
+            </a>
+          </div>
+          <div class="linklist-link" style="max-width:48pt;">
+            <a class="discord" href="https://discord.gg/VP9SHSc" alt="Discord">
+              {% include icon/roundrect/discord.svg %}
+            </a>
+          </div>
+          <div class="linklist-link" style="max-width:48pt;">
+            <a class="rss" href="{{ "/feed.xml" | prepend: site.baseurl }}" alt="RSS">
+              {% include icon/roundrect/rss.svg %}
+            </a>
+          </div>
         </div>
-        <div class="linklist-link" style="max-width:48pt;">
-          <a href="https://twitter.com/dothtm" alt="Twitter"> 
-            {% include icon/roundrect/twitter.svg %}
-          </a>
-        </div>
-        <div class="linklist-link" style="max-width:48pt;">
-          <a rel="me" href="https://mastodon.social/@dotHTM"  alt="Mastodon"> 
-           {% include icon/roundrect/mastodon.svg %}
-          </a>
-        </div>
-        <div class="linklist-link" style="max-width:48pt;">
-          <a rel="me" href="https://discord.gg/VP9SHSc"  alt="Discord"> 
-           {% include icon/roundrect/discord.svg %}
-          </a>
-        </div>
-      </div>
-      
       <div class="footer-col footer-col-3">
         <p>{{ site.description }}</p>
       </div>

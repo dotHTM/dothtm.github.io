@@ -1,6 +1,4 @@
 $spacing-unit: 20px;
-
-
 $violet: hsl(260, 100%, 10%);
 $green: lime;
 $green_dark: hsl(130, 100%, 10%);
@@ -9,20 +7,15 @@ $yellow: lighten(yellow, 35%);
 $text_color: rgba($yellow, 70%);
 $subdue_color: rgba($yellow, 50%);
 $blockquote_color: rgba($yellow, 15%);
-
 $stripe_wide: 30px;
 $stripe_edge: 15px;
-
 $slant_angle: 17deg;
 $slant_angle2: 7deg;
-
 $stripe-angle: 90deg+$slant_angle;
 
 body {
-
   padding-top: 2rem;
   padding-bottom: 12rem;
-
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   ;
   color: $text_color;
@@ -33,8 +26,6 @@ body {
     transparent 100%-20%,
     rgba(black, 40%) 100%,
     ),
-
-
     linear-gradient(0deg,
     rgba($pink, 20%),
     transparent,
@@ -51,24 +42,16 @@ body {
   background-blend-mode: lighten;
 }
 
-
-
 .wrapper {
   color: $text_color;
   background: $violet;
   box-shadow: 0px 5px 10px 2px black;
 }
 
-
-
-
-
 header {
   .wrapper {
     background: darken($violet, 4%);
   }
-
-
 
   #site-title {
     width: 100%;
@@ -86,7 +69,6 @@ header {
       color: $text_color;
     }
 
-
     font-size: 4rem;
     font-family: SFMono-Regular,
     Menlo,
@@ -100,7 +82,6 @@ header {
     float: left;
     vertical-align: middle;
   }
-
 
   #site-desc {
     float: left;
@@ -119,7 +100,6 @@ header {
     }
   }
 
-
   .divider {
     color: $pink;
   }
@@ -130,7 +110,6 @@ header {
 
     #site-title {
       color: $pink;
-
     }
 
     &.page-link {
@@ -143,10 +122,9 @@ header {
   }
 }
 
-.page-content, 
+.page-content,
 footer {
   a {
-
     color: #0a0;
 
     &:hover,
@@ -158,37 +136,27 @@ footer {
       color: darken($green, 10%);
     }
   }
-  
-  
 }
-
 
 .page-content {
   strong {
     font-weight: 900;
     font-size: 1.2em;
-
     color: cyan;
-
     -webkit-text-fill-color: $violet;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: cyan;
   }
-  
+
   emphasis {
     // font-weight: 900;
     font-size: 1.2em;
-
     color: $pink;
-
     -webkit-text-fill-color: $violet;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: cyan;
   }
-
 }
-
-
 
 @mixin bi_light_1 {
   background: repeating-linear-gradient(90deg,
@@ -228,7 +196,6 @@ footer {
   background-blend-mode: lighten;
 }
 
-
 @mixin rhombus {
   border-radius: .5rem;
   padding: 1rem 2rem;
@@ -243,21 +210,13 @@ footer {
   display: table;
 }
 
-
-
-
-
 article {
-
   $margin_spacer: 2rem;
-
 
   .post-header {
     // background: $green_dark;
-
     @include bi_light_3;
     font-size: 2rem;
-
 
     * {
       margin: 0;
@@ -269,15 +228,10 @@ article {
       margin-left: 0rem;
       // transform: skew(-$slant_angle2);
     }
-
   }
 
-
-
   .post-content {
-
     margin: 2rem;
-
 
     .post-meta {
       font-weight: 900;
@@ -289,7 +243,6 @@ article {
     // p {
     // text-indent: $margin_spacer*1/4;
     // }
-
     p,
     ul,
     ol {
@@ -307,7 +260,6 @@ article {
     @mixin block_content {
       margin-top: $margin_spacer/2;
       margin-bottom: $margin_spacer/2;
-
     }
 
     twitter-widget {
@@ -320,12 +272,9 @@ article {
     pre {
       margin-left: $margin_spacer * 3/2;
       margin-right: $margin_spacer/2;
-
       @include block_content;
-
       line-height: 1.5em;
       padding: 1em;
-
       background: $blockquote_color;
     }
 
@@ -335,8 +284,6 @@ article {
       border-left: $blockquote_border_width cyan solid;
     }
 
-
-
     pre {
       border-left: $blockquote_border_width red solid;
     }
@@ -345,13 +292,11 @@ article {
       background: $blockquote_color;
       padding: 0.2em;
       color: white;
-
     }
 
     // pre span {
     //   display: block;
     // }
-
     // pre span:before {
     //   counter-increment: line;
     //   content: counter(line);
@@ -361,9 +306,6 @@ article {
     //   margin-right: .5em;
     //   color: #888
     // }
-
-
-
     h1 {
       @include rhombus;
       @include bi_light_1;
@@ -378,7 +320,6 @@ article {
       color: $text_color;
       border: 4px $text_color solid;
     }
-
 
     h3 {
       @include rhombus_short;
@@ -403,13 +344,9 @@ article {
   }
 }
 
-
 ul.post-list {
-
   margin-left: 0 !important;
   padding-left: 0 !important;
-
-
   list-style-type: none;
 
   a {
@@ -437,14 +374,11 @@ ul.post-list {
       background: #fff2;
       border-radius: .5rem;
       padding: .5rem;
-
     }
 
     // @include rhombus;
-
   }
 }
-
 
 footer {
   .wrapper {
@@ -452,24 +386,47 @@ footer {
     // filter: brightness(50%);
   }
 
-  .linklist-link * {
+  .foot_wrapper {
+    width: 100%;
+    height: 100px;
+  }
+
+  .linklist-link a {
     fill: $green;
+
+    svg {
+      transition: all .2s ease-in-out;
+    }
+
+    svg:hover {
+      transform: scale(1.5);
+    }
+
+    &:hover {
+      &.github {
+        fill: white;
+      }
+
+      &.twitter {
+        fill: #00aced;
+      }
+
+      &.mastodon {
+        fill: #4988CE;
+      }
+
+      &.discord {
+        fill: #7289DA;
+      }
+
+      &.rss {
+        fill: orange;
+      }
+    }
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 footer {
-
-
   .linklist {
     width: 50%;
     float: right;
@@ -478,45 +435,42 @@ footer {
       float: right;
       margin: 10px;
       width: 48px;
+      display: table;
+
+      a {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
     }
   }
-
 }
-
-
-
 
 // /**
 //  * Wrapper
 //  */
 .wrapper {
   max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-
   margin-right: auto;
   margin-left: auto;
   // padding-right: $spacing-unit;
   // padding-left: $spacing-unit;
   @extend %clearfix;
-
   padding-right: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
 
   @include media-query($on-laptop) {
     max-width: calc(#{$content-width} - (#{$spacing-unit}));
-
-
     margin-right: $spacing-unit / 4;
     margin-left: $spacing-unit / 4;
   }
 
   margin-top:0;
   margin-bottom:0;
-
   // padding-top: 0 ;
   padding-top: $spacing-unit;
   padding-bottom: $spacing-unit;
 }
-
 
 /**
  * Clearfix
