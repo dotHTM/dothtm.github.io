@@ -224,7 +224,7 @@ $margin_spacer: 5rem;
   }
 
 p {
-  text-indent: $margin_spacer/2;
+  text-indent: $margin_spacer*1/4;
 }
 
   p,
@@ -242,7 +242,9 @@ p {
   }
 
   blockquote,
-  pre {
+  pre,
+  twitter-widget
+   {
     margin-left: $margin_spacer * 3/2;
     margin-right: $margin_spacer/2;
     margin-top: $margin_spacer/2;

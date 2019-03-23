@@ -19,7 +19,7 @@ I used to keep all my customizations in `.bashrc` and went along merrily in my d
 
 Portability was an issue too, as all my customizations died unless backed up and transfered to it's home. I'd include my "bash hacks" folder into my paths export, and largely I was constrained to subshells and not being able to automatically `cd` after some work was done.
 
-I probably had some simple clever ideas back then, but since I was mostly tackling new problems on other people's machines, I pretty much only customized my machine by installing other commands via [MacPorts](google.com).
+I probably had some simple clever ideas back then, but since I was mostly tackling new problems on other people's machines, I pretty much only customized my machine by installing other commands via [MacPorts](https://macports.org).
 
 I've since adopted [Homebrew](https://brew.sh) and learned proper git on the command line and a few GUIs and decided to start sharing some of my tricks in a more stable location (ironically) than my paid subscription to a major IT name's cloud service which I otherwise still love and use.
 
@@ -47,7 +47,7 @@ I wanted to break these apart into separate pieces and control how they loaded, 
 
 I wanted my prompt customizations to live separately from my aliases, exports, plug-ins being sourced. A place for every tool, and every tool in it's place.
 
-Custom `git clone` locations are discovered through a trick found on one of the [Stack Overflow](google.com) sites:
+Custom `git clone` locations are discovered through a trick found on one of the [Stack Overflow](https://stackoverflow.com) sites:
 
 ```sh
 PROFILE_DIR=$( cd $( dirname ${BASH_SOURCE[0]} ) && pwd )
