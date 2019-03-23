@@ -1,8 +1,7 @@
 ---
 title: "New look, new beginings"
 subtitle: "a reason for me to write again"
-
-draftdate: "2019-03-23"
+date: "2019-03-23"
 
 categories: blog
 layout: post

@@ -368,8 +368,12 @@ border: 4px $text_color solid;
 
 
 ul.post-list {
+  
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  
+    
   list-style-type: none;
-
   a {
 
     &:hover,
@@ -398,7 +402,7 @@ ul.post-list {
 
     }
 
-    @include rhombus;
+    // @include rhombus;
 
   }
 }
