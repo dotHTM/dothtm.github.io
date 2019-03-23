@@ -186,6 +186,19 @@ header {
 
 article {
 
+  .post-meta {
+font-weight: 900;
+font-size: large;
+color: hotpink;
+}
+  
+  p, ul, ol {
+    margin-left: 5rem;
+    margin-right: 2rem;
+    line-height: 1.5em;
+  }
+  
+  
   h1,
   h2 {
     @include rhombus;
