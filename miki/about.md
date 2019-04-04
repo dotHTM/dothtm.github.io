@@ -2,6 +2,7 @@
 layout: miki
 title: About
 permalink: /miki/about/
+permalink: /miki/about-test/
 bullet: '#'
 nav: 100
 desc: 
