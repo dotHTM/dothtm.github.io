@@ -179,18 +179,3 @@
 //     }
 // }
 
-
-
-
-
-/**
- * Dark mode
- */
-.dark-mode .page-content {
-	filter: invert(100%);
-	img {
-		filter: invert(100%);
-	}
-}
-
-
