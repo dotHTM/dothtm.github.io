@@ -6,10 +6,6 @@
 
 
 
-
-
-
-
 // /**
 //  * Reset some basic elements
 //  */
@@ -182,3 +178,19 @@
 //         }
 //     }
 // }
+
+
+
+
+
+/**
+ * Dark mode
+ */
+html.dark-mode {
+	filter: invert(100%);
+	img {
+		filter: invert(100%);
+	}
+}
+
+
