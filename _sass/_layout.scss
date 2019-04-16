@@ -487,17 +487,18 @@ footer {
 
 
 @mixin inversion{
-filter:	invert(100%) hue-rotate(180deg)
+  filter: invert(100%)
+          hue-rotate(180deg);
 }
 
 /**
  * Dark mode
  */
 .dark-mode .page-content {
-	@include inversion
+  @include inversion;
   img {
-			@include inversion
-	}
+    @include inversion;
+  }
 }
 
 
