@@ -1,8 +1,8 @@
 ---
-title: Toolbox
+title: Developer Toolbox
 layout: miki
 permalink: /miki/toolbox/
-bullet: ⌨︎
+bullet: 🛠
 updated: 2019-03-23
 nav: 500
 desc:
