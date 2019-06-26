@@ -7,7 +7,7 @@ updated: 2019-06-06
 
 Quick beat sketch after watching [PBS Digital Sound Field](https://www.youtube.com/watch?v=zKicD86F7KA)
 
-Instrument: OPZ
+Instrument: OP-Z
 
 Source: <https://github.com/dotHTM/music/blob/m…20beat%20sketch.opz>
 
