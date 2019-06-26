@@ -1,5 +1,5 @@
 ---
-title: Developer Toolbox
+title: Toolbox
 layout: miki
 permalink: /miki/toolbox/
 bullet: 🛠
