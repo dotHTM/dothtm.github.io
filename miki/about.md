@@ -17,6 +17,5 @@ Dog father. Amateur noise maker.
 - [Twiter](https://twitter.com/dothtm)
 - [Mastadon](https://mastodon.social/@dotHTM)
 - [GitHub](https://github.com/dothtm)
-- [Soundcloud](https://soundcloud.com/dothtm)
 
 Join my [Discord Server](https://discord.gg/VP9SHSc)!
