@@ -1,17 +1,31 @@
 $spacing-unit: 20px;
-$violet: hsl(260, 100%, 10%);
+$violet_dark: hsl(260, 50%, 30%);
+$violet: hsl(260, 50%, 80%);
 $green: lime;
-$green_dark: hsl(130, 100%, 10%);
+$green_dark: hsl(130, 100%, 25%);
 $pink: hotpink;
+$pink_dark: hsl(330, 100%, 30%);
 $yellow: lighten(yellow, 35%);
-$text_color: rgba($yellow, 70%);
-$subdue_color: rgba($yellow, 50%);
-$blockquote_color: rgba($yellow, 15%);
+
+$cyan: cyan;
+$cyan_dark: darken(cyan, 20);
+
 $stripe_wide: 30px;
 $stripe_edge: 15px;
 $slant_angle: 17deg;
 $slant_angle2: 7deg;
 $stripe-angle: 90deg+$slant_angle;
+
+$sepia: hsl(50, 100%, 90%);
+
+$title_text_color: white;
+$text_color: $violet_dark;
+$subdue_color: rgba($yellow, 50%);
+
+$code_color : darken($cyan_dark, 10);
+$code_background: rgba($code_color, 15%);
+
+$document_background : $sepia;
 
 body {
   padding-top: 2rem;
@@ -29,7 +43,7 @@ body {
     linear-gradient(0deg,
     rgba($pink, 20%),
     transparent,
-    rgba(cyan, 20%),
+    rgba($cyan, 20%),
     ),
     repeating-linear-gradient(-$stripe-angle,
     lighten($violet, 5%),
@@ -42,20 +56,30 @@ body {
   background-blend-mode: lighten;
 }
 
+
+.wrapper {
+  box-shadow: 0px 5px 10px 2px hsla(0, 0, 0, 0.5);
+}
+
+header,
+footer {
+
+  .wrapper {
+    background: $violet_dark;
+    color: $title_text_color;
+  }
+}
+
 .wrapper {
   color: $text_color;
-  background: $violet;
-  box-shadow: 0px 5px 10px 2px black;
+  background: $document_background;
 }
 
 header {
-  .wrapper {
-    background: darken($violet, 4%);
-  }
-
   #site-title {
     width: 100%;
     float: left;
+
 
     .dot {
       color: $pink;
@@ -66,7 +90,7 @@ header {
     }
 
     .platform {
-      color: $text_color;
+      color: $title_text_color;
     }
 
     font-size: 4rem;
@@ -122,52 +146,52 @@ header {
   }
 }
 
-.small{
-    font-size: x-small;
-  }
-  
-  
+.small {
+  font-size: x-small;
+}
+
+
 .page-content,
 footer {
-  
-  
+
+
   a {
-    color: #0a0;
+    color: $green_dark;
 
     &:hover,
     &:hover:visited {
-      color: $green;
+      color: lighten($green_dark, 20%);
     }
 
     &:visited {
-      color: darken($green, 10%);
+      color: lighten($green_dark, 10%);
     }
   }
 }
 
 .page-content {
   strong {
-    font-weight: 900;
+    font-weight: 700;
     font-size: 1.2em;
-    color: cyan;
-    -webkit-text-fill-color: $violet;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: cyan;
+    color: $violet_dark;
   }
 
   emphasis {
     // font-weight: 900;
     font-size: 1.2em;
-    color: $pink;
-    -webkit-text-fill-color: $violet;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: cyan;
+    color: $pink_dark;
   }
 }
 
 @mixin bi_light_1 {
-  background: repeating-linear-gradient(90deg,
-    lighten($violet, 4%),
+  color: white;
+  background:
+    repeating-linear-gradient(180deg,
+    rgba(white, 0.2),
+    rgba(white, 0.0) 100%,
+    ),
+    repeating-linear-gradient(90deg,
+    lighten($violet_dark, 4%),
     darken($pink, 50%) 100%,
     ),
     repeating-linear-gradient(0deg,
@@ -178,9 +202,14 @@ footer {
 }
 
 @mixin bi_light_2 {
+  color: white;
   background:
+    repeating-linear-gradient(180deg,
+    rgba(white, 0.2),
+    rgba(white, 0.0) 100%,
+    ),
     repeating-linear-gradient(0deg,
-    lighten($violet, 4%),
+    lighten($violet_dark, 4%),
     darken($green, 35%) 100%,
     ),
     repeating-linear-gradient(-90deg,
@@ -191,10 +220,15 @@ footer {
 }
 
 @mixin bi_light_3 {
+  color: white;
   background:
+    repeating-linear-gradient(180deg,
+    rgba(white, 0.2),
+    rgba(white, 0.0) 100%,
+    ),
     repeating-linear-gradient(90deg,
-    lighten($violet, 4%),
-    darken(cyan, 35%) 100%,
+    lighten($violet_dark, 4%),
+    darken($cyan, 35%) 100%,
     ),
     repeating-linear-gradient(180deg,
     transparent,
@@ -224,6 +258,18 @@ article {
     // background: $green_dark;
     @include bi_light_3;
     font-size: 2rem;
+
+    header {
+      margin: 0;
+      padding: 0;
+    }
+
+    .title_wrap {
+      // border: 1px white solid;
+      // outline: 1px white solid, ;
+      padding: 0px 10px;
+      margin: 0;
+    }
 
     * {
       margin: 0;
@@ -282,23 +328,24 @@ article {
       @include block_content;
       line-height: 1.5em;
       padding: 1em;
-      background: $blockquote_color;
     }
 
     $blockquote_border_width : 4px;
 
     blockquote {
-      border-left: $blockquote_border_width cyan solid;
+      border-left: $blockquote_border_width $cyan_dark solid;
+      background: rgba($cyan_dark, 0.1);
     }
 
     pre {
-      border-left: $blockquote_border_width red solid;
+      border-left: $blockquote_border_width $code_color solid;
+      background: rgba($code_color, 0.1);
     }
 
     p code {
-      background: $blockquote_color;
+      background: $code_background;
       padding: 0.2em;
-      color: white;
+      color: black;
     }
 
     // pre span {
@@ -323,7 +370,7 @@ article {
       font-size: 1.5rem;
       @include rhombus_short;
       padding: 0.67rem 1.5rem;
-      $text_color: $green;
+      $text_color: $green_dark;
       color: $text_color;
       border: 4px $text_color solid;
     }
@@ -332,7 +379,7 @@ article {
       @include rhombus_short;
       padding: 0.5rem 1rem;
       margin-left: $margin_spacer;
-      $text_color: $pink;
+      $text_color: $pink_dark;
       color: $text_color;
       border: 4px $text_color solid;
     }
@@ -341,7 +388,7 @@ article {
       @include rhombus_short;
       padding: 0.5rem;
       margin-left: $margin_spacer*2;
-      $text_color: cyan;
+      $text_color: $cyan_dark;
       color: $text_color;
       border: 4px $text_color solid;
     }
@@ -388,10 +435,6 @@ ul.post-list {
 }
 
 footer {
-  .wrapper {
-    background: darken($violet, 4%);
-    // filter: brightness(50%);
-  }
 
   .foot_wrapper {
     width: 100%;
@@ -493,20 +536,17 @@ footer {
 
 
 
-@mixin inversion{
-  filter: invert(100%)
-          hue-rotate(180deg);
-}
+// @mixin inversion {
+//   filter: invert(100%) hue-rotate(180deg);
+// }
 
-/**
- * Dark mode
- */
-.dark-mode .page-content {
-  @include inversion;
-  img {
-    @include inversion;
-  }
-}
+// /**
+//  * Dark mode
+//  */
+// .dark-mode .page-content {
+//   @include inversion;
 
-
-
+//   img {
+//     @include inversion;
+//   }
+// }

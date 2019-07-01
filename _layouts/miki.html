@@ -1,15 +1,9 @@
 ---
 layout: default
+default_bullet: ↔
 ---
 <article class="post">
-    {%if page.hide_title%}
-    {%else%}
-  <div class="wrapper post-header">
-    <header>
-          <h1 class="post-title">{%if page.bullet%}{{page.bullet}}{%else%}⮑{%endif%} {{ page.title }}</h1>
-        </header>
-  </div>
-    {%endif%}
+  {% include post-header.html %}
   <div class="wrapper">
     <div class="post-content">
       {{ content }}
