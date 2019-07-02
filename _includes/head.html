@@ -5,8 +5,8 @@
   <title>dothtm{% if page.title %} - {{ page.title | escape }}{%else%}.github.io{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | absolute_url }}">
   
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,9 +18,10 @@
   
   <meta property="og:title" content="dotHTM - {% if page.title %}{{page.title}}{% else %}I'm a cool webpage!{% endif %}" />
   {% if page.layout == "music" && page.file %}<meta property="og:type" content="music.song" />{% endif %}
-  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
-  <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
-  {% if page.desc %}<meta property="og:description" content="{{ page.desc }}" />{% endif %}
-  {%if page.layout == "music" && page.file %}<meta property="og:audio" content="{{page.file | prepend: site.baseurl | prepend: site.url }}" />{% endif %}
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  <meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.logo | absolute_url }}{% endif %}" />
+  {%if page.layout == "music" && page.file %}<meta property="og:audio" content="{{page.file | absolute_url }}" />{% endif %}
+  
+  <meta property="og:description" content="{% if page.desc %}{{ page.desc }}{% else %}{{ page.content | normalize_whitespace | truncatewords: 20 | xml_escape}}{% endif %}" />
   
 </head>
