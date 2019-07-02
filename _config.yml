@@ -22,3 +22,4 @@ md: kramdown
 
 exclude: ['node_modules','gruntfile.js','config.rb','brokenLinks.mdown','*.todo','package.json','*.sublime-project']
 
+logo: /image/dot_logo.png

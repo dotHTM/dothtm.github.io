@@ -2,11 +2,28 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>dothtm{% if page.title %} - {{ page.title | escape }}{%else%}.github.io{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <meta name="msapplication-TileColor" content="#402673">
+  <meta name="theme-color" content="hotpink">
+  
+  <meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}I'm a cool webpage!{% endif %}" />
+  {% if page.layout == "music" && page.file %}
+  <meta property="og:type" content="music.song" />{% endif %}
+  <meta property="og:url" content="{{ page.url }}" />
+  <meta property="og:image" content="{% if page.image %}{{ page.image  }}{% else %}{{ site.logo  }}{% endif %}" />
+  {% if page.desc %}
+  <meta property="og:description" content="{{ page.desc }}" />{% endif %}
+  {%if page.layout == "music" && page.file %}
+  <meta property="og:audio" content="{{page.file }}" />{% endif %}
+  
 </head>
