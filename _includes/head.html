@@ -16,14 +16,11 @@
   <meta name="msapplication-TileColor" content="#402673">
   <meta name="theme-color" content="hotpink">
   
-  <meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}I'm a cool webpage!{% endif %}" />
-  {% if page.layout == "music" && page.file %}
-  <meta property="og:type" content="music.song" />{% endif %}
-  <meta property="og:url" content="{{ page.url }}" />
-  <meta property="og:image" content="{% if page.image %}{{ page.image  }}{% else %}{{ site.logo  }}{% endif %}" />
-  {% if page.desc %}
-  <meta property="og:description" content="{{ page.desc }}" />{% endif %}
-  {%if page.layout == "music" && page.file %}
-  <meta property="og:audio" content="{{page.file }}" />{% endif %}
+  <meta property="og:title" content="dotHTM - {% if page.title %}{{page.title}}{% else %}I'm a cool webpage!{% endif %}" />
+  {% if page.layout == "music" && page.file %}<meta property="og:type" content="music.song" />{% endif %}
+  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
+  {% if page.desc %}<meta property="og:description" content="{{ page.desc }}" />{% endif %}
+  {%if page.layout == "music" && page.file %}<meta property="og:audio" content="{{page.file | prepend: site.baseurl | prepend: site.url }}" />{% endif %}
   
 </head>
