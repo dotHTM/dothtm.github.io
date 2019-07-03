@@ -1,0 +1,20 @@
+<meta property="og:title" content="dotHTM - {% if page.title %}{{page.title}}{% else %}I'm a cool webpage!{% endif %}" />
+<meta property="og:type" content="{% if page.layout == "music" && page.file %}music.song{% else %}article{% endif %}" />
+<meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.logo | absolute_url }}{% endif %}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+
+{% if page.date or page.updated %}<meta property="article:published_time" content="{% if page.updated %}{{ page.updated | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}">
+{% endif %}
+
+<meta property="og:description" content="{% if page.desc %}{{ page.desc }}{% else %}{{ page.content | normalize_whitespace | truncatewords: 20 | xml_escape}}{% endif %}" />
+
+{%if page.layout == "music" && page.file %}<meta property="og:audio" content="{{page.file | absolute_url }}" />
+<meta property="og:audio:secure_url" content="{{page.file | absolute_url }}" />
+<meta property="og:audio:type" content="audio/mpeg" />
+{% endif %}
+
+{% for some_tag in page.tags %}<meta property="article:tag" content="{{some_tag}}">
+{% endfor %}{% for some_tag in page.instrument %}<meta property="article:tag" content="{{some_tag}}">
+{% endfor %}{% for some_tag in page.daw %}<meta property="article:tag" content="{{some_tag}}">
+{% endfor %}
+

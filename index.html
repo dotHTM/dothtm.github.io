@@ -9,7 +9,7 @@ hide_title: true
     {% for post in site.posts %}
     <li>
       <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -<span class="post-meta">{{ post.date | date: site.dateformat }}</span>
       </h2>
       <p class="post-desc">
         {% if post.desc %}{{post.desc}}{% endif %} <a class="post-desc" href="{{ post.url | prepend: site.baseurl }}">…</a>

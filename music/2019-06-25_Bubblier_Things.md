@@ -3,11 +3,14 @@ title: Bubblier Things (Stranger Things Remix)
 layout: music
 file: /music/tracks/2019-06-25 Bubblier Things (Stranger Things remix).m4a
 tags:
-    - OP-Z
-    - GarageBand
     - remix
     - cover
-updated: 2019-06-25
+instrument:
+    - OP-Z
+daw:
+    - GarageBand
+    - macOS
+date: 2019-06-25
 ---
 
 Based on the baseline from "Stranger Things" theme by Kyle Dixon & Michael Stein.

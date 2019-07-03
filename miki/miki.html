@@ -23,7 +23,7 @@ nav: 300
 
 {% if page.updated %}
 {% if nowunix < expire_update_notice %}
-         -<span class="post-meta">Updated {{ page.updated | date: "%b %-d, %Y" }}</span>
+         -<span class="post-meta">Updated {{ page.updated | date: site.dateformat }}</span>
          {%endif%}
     {%endif%}
       </h2>

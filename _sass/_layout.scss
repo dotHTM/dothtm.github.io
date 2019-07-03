@@ -254,6 +254,23 @@ footer {
 article {
   $margin_spacer: 2rem;
 
+  .date_string {
+    font-size: 2rem;
+    $date_weight: 200;
+    font-weight: $date_weight !important;
+    // color: lighten($pink, 10);
+    strong {
+      font-weight: $date_weight !important;
+      color: lighten($green, 10);
+    }
+    // padding: 1em;
+
+    // @include rhombus_short;
+    // @include bi_light_1;
+  }
+
+
+
   .post-header {
     // background: $green_dark;
     @include bi_light_3;
@@ -293,9 +310,10 @@ article {
       margin-left: $margin_spacer/4;
     }
 
-    // p {
-    // text-indent: $margin_spacer*1/4;
-    // }
+    audio {
+      width: 100%;
+    }
+
     p,
     ul,
     ol {
@@ -532,6 +550,7 @@ footer {
     clear: both;
   }
 }
+
 
 
 

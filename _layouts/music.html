@@ -2,14 +2,7 @@
 layout: default
 default_bullet: ♬
 ---
-<article class="post">
-  {% include post-header.html %}
-  <div class="wrapper">
-    <div class="post-content">
-      <audio controls src="{{ page.file }}">
-        <p>Sorry, No Non-HTML5 Fallback.</p>
-      </audio>
-      {{ content }}
-    </div>
-  </div>
-</article>
+<audio controls src="{{ page.file }}">
+  <p>Sorry, No Non-HTML5 Fallback.</p>
+</audio>
+{{ content }}
