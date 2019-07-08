@@ -18,6 +18,11 @@
 {% endif %}
 <meta property="og:type" content="{% if page.layout == "music" && page.file %}music.song{% else %}article{% endif %}" />
 
+{% for some_tag in page.tags %}<meta property="article:tag" content="{{some_tag}}">
+{% endfor %}{% for some_tag in page.instrument %}<meta property="article:tag" content="{{some_tag}}">
+{% endfor %}{% for some_tag in page.daw %}<meta property="article:tag" content="{{some_tag}}">
+{% endfor %}
+
 {%if page.layout == "music" && page.file %}
 <meta property="og:audio" content="{{ og_file }}" />
 <meta property="og:audio:secure_url" content="{{ og_file }}" />
@@ -32,9 +37,3 @@
 <meta name="twitter:player:width" content="413" />
 <meta name="twitter:player:height" content="413" />
 {% endif %}
-
-{% for some_tag in page.tags %}<meta property="article:tag" content="{{some_tag}}">
-{% endfor %}{% for some_tag in page.instrument %}<meta property="article:tag" content="{{some_tag}}">
-{% endfor %}{% for some_tag in page.daw %}<meta property="article:tag" content="{{some_tag}}">
-{% endfor %}
-
