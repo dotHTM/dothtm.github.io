@@ -11,7 +11,7 @@ daw:
     - GarageBand
     - macOS
 date: 2019-06-25
-player: https://dothtm.github.io/music/2019-06-25_Bubblier_Things_mini.html
+player_url: https://dothtm.github.io/music/2019-06-25_Bubblier_Things_mini.html
 ---
 
 Based on the baseline from "Stranger Things" theme by Kyle Dixon & Michael Stein.
