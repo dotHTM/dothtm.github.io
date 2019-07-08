@@ -4,7 +4,7 @@ default_bullet: ♬
 default_image: /image/player_logo.png
 ---
 <audio controls>
-  <source src="{{ page.file || absolute_url }}">
+  <source src="{{ page.file | absolute_url }}">
   <p>Sorry, No Non-HTML5 Fallback.</p>
 </audio>
 {{ content }}
