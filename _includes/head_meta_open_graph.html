@@ -1,16 +1,36 @@
-<meta property="og:title" content="dotHTM - {% if page.title %}{{page.title}}{% else %}I'm a cool webpage!{% endif %}" />
-<meta property="og:type" content="{% if page.layout == "music" && page.file %}music.song{% else %}article{% endif %}" />
-<meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{% if layout.default_image %}{{ layout.default_image | absolute_url }}{% else %}{{ site.logo | absolute_url }}{% endif %}{% endif %}" />
-<meta property="og:url" content="{{ page.url | absolute_url }}" />
 
-{% if page.date or page.updated %}<meta property="article:published_time" content="{% if page.updated %}{{ page.updated | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}">
+{% capture og_title %}dotHTM - {% if page.title %}{{page.title}}{% else %}I'm a cool webpage!{% endif %}{% endcapture %}
+{% capture og_desc %}{% if page.desc %}{{ page.desc }}{% else %}{{ page.content | normalize_whitespace | truncatewords: 20 | xml_escape}}{% endif %}{% endcapture %}
+{% capture og_image %}{% if page.image %}{{ page.image | absolute_url }}{% else %}{% if layout.default_image %}{{ layout.default_image | absolute_url }}{% else %}{{ site.logo | absolute_url }}{% endif %}{% endif %}{% endcapture %}
+{% capture og_url %}{{ page.url | absolute_url }}{% endcapture %}
+{% capture og_file %}{{ page.file | absolute_url }}{% endcapture %}
+{% capture og_ %}{% endcapture %}
+
+<meta property="og:title" content="{{ og_title }}" />
+<meta property="og:description" content="{{ og_desc }}" />
+<meta property="og:image" content="{{ og_image }}" />
+<meta property="og:url" content="{{ og_url }}" />
+
+<link rel="author" href="/miki/about/">
+
+{% if page.date or page.updated %}
+<meta property="article:published_time" content="{% if page.updated %}{{ page.updated | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}">
 {% endif %}
+<meta property="og:type" content="{% if page.layout == "music" && page.file %}music.song{% else %}article{% endif %}" />
 
-<meta property="og:description" content="{% if page.desc %}{{ page.desc }}{% else %}{{ page.content | normalize_whitespace | truncatewords: 20 | xml_escape}}{% endif %}" />
-
-{%if page.layout == "music" && page.file %}<meta property="og:audio" content="{{page.file | absolute_url }}" />
-<meta property="og:audio:secure_url" content="{{page.file | absolute_url }}" />
+{%if page.layout == "music" && page.file %}
+<meta property="og:audio" content="{{ og_file }}" />
+<meta property="og:audio:secure_url" content="{{ og_file }}" />
 <meta property="og:audio:type" content="audio/mpeg" />
+
+<meta name="twitter:card" content="player" />
+<meta name="twitter:site" content="dotHTM" />
+<meta name="twitter:title" content="{{ og_title }}" />
+<meta name="twitter:description" content="{{ og_desc }}" />
+<meta name="twitter:image" content="{{ og_image }}" />
+<meta name="twitter:player" content="{{ og_url }}" />
+<meta name="twitter:player:width" content="413" />
+<meta name="twitter:player:height" content="413" />
 {% endif %}
 
 {% for some_tag in page.tags %}<meta property="article:tag" content="{{some_tag}}">
