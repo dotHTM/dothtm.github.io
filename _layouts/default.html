@@ -8,6 +8,11 @@
       {% include post-header.html %}
       <div class="wrapper">
         <div class="post-content">
+          {% if page.image %}
+          <img src="{{ page.image | absoute_url }}" />
+          {% else if page.default_image %}
+          <img src="{{ page.default_image | absoute_url }}" />
+          {% endif %}
           {{ content }}
         </div>
       </div>
