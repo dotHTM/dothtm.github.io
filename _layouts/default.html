@@ -10,8 +10,8 @@
         <div class="post-content">
           {% if page.image %}
           <img src="{{ page.image | absoute_url }}" />
-          {% else if page.default_image %}
-          <img src="{{ page.default_image | absoute_url }}" />
+          {% else if layout.default_image %}
+          <img src="{{ layout.default_image | absoute_url }}" />
           {% endif %}
           {{ content }}
         </div>
