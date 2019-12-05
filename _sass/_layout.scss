@@ -20,10 +20,10 @@ $sepia: hsl(50, 100%, 90%);
 
 $title_text_color: white;
 $text_color: $violet_dark;
-$subdue_color: rgba($yellow, 50%);
+$subdue_color: rgba($yellow, .50);
 
 $code_color : darken($cyan_dark, 10);
-$code_background: rgba($code_color, 15%);
+$code_background: rgba($code_color, .15);
 
 $document_background : $sepia;
 
@@ -35,15 +35,15 @@ body {
   color: $text_color;
   background:
     linear-gradient(90deg,
-    rgba(black, 40%) 10%,
+    rgba(black, .40) 10%,
     transparent 20%,
     transparent 100%-20%,
-    rgba(black, 40%) 100%,
+    rgba(black, .40) 100%,
     ),
     linear-gradient(0deg,
-    rgba($pink, 20%),
+    rgba($pink, .20),
     transparent,
-    rgba($cyan, 20%),
+    rgba($cyan, .20),
     ),
     repeating-linear-gradient(-$stripe-angle,
     lighten($violet, 5%),
@@ -196,7 +196,7 @@ footer {
     ),
     repeating-linear-gradient(0deg,
     transparent,
-    rgba(yellow, 20%) 100%,
+    rgba(yellow, .20) 100%,
     );
   background-blend-mode: lighten;
 }
@@ -214,7 +214,7 @@ footer {
     ),
     repeating-linear-gradient(-90deg,
     transparent,
-    rgba($pink, 20%) 100%,
+    rgba($pink, .20) 100%,
     );
   background-blend-mode: lighten;
 }
@@ -232,7 +232,7 @@ footer {
     ),
     repeating-linear-gradient(180deg,
     transparent,
-    rgba($pink, 20%) 100%,
+    rgba($pink, .20) 100%,
     );
   background-blend-mode: lighten;
 }
