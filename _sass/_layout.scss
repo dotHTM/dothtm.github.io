@@ -361,6 +361,7 @@ article {
     pre {
       border-left: $blockquote_border_width $code_color solid;
       background: rgba($code_color, 0.1);
+      overflow-x: scroll;
     }
 
     p code {
