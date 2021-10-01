@@ -1,5 +1,5 @@
-# dothtm.github.io
+# dothtm.psyburr.space
 A page for dotHTM
 
-<https://dothtm.github.io>
+<https://dothtm.psyburr.space>
 
