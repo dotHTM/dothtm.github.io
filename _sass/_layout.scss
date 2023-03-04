@@ -14,6 +14,8 @@ $stripe_wide: 30px;
 $stripe_edge: 15px;
 $slant_angle: 17deg;
 $slant_angle2: 7deg;
+$darken_a: 27%;
+$darken_b: 35%;
 $stripe-angle: 90deg+$slant_angle;
 
 $sepia: hsl(50, 100%, 90%);
@@ -35,24 +37,27 @@ body {
   ;
   color: $text_color;
   background:
-    linear-gradient(90deg,
-    rgba(black, .40) 10%,
-    transparent 20%,
-    transparent 100%-20%,
-    rgba(black, .40) 100%,
-    ),
     linear-gradient(0deg,
     rgba($pink, .20),
-    transparent,
     rgba($cyan, .20),
     ),
     repeating-linear-gradient(-$stripe-angle,
-    lighten($violet, 5%),
-    lighten($violet, 5%) $stripe_wide,
-    lighten($violet, 10%) $stripe_wide + $stripe_edge,
-    lighten($violet, 10%) 2*$stripe_wide + $stripe_edge,
-    lighten($violet, 5%) 2*$stripe_wide + 2*$stripe_edge,
+    darken($violet, $darken_a),
+    darken($violet, $darken_a) $stripe_wide,
+    darken($violet, $darken_b) calc($stripe_wide + $stripe_edge),
+    darken($violet, $darken_b) calc(2*$stripe_wide + $stripe_edge),
+    darken($violet, $darken_a) calc(2*$stripe_wide + 2*$stripe_edge),
     ),
+    
+    
+    
+    
+    // linear-gradient(90deg,
+    // rgba(black, .40) 10%,
+    // transparent 20%,
+    // transparent 100%-20%,
+    // rgba(black, .40) 100%,
+    // ),
   ;
   background-blend-mode: lighten;
 }
