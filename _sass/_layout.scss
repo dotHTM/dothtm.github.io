@@ -310,20 +310,20 @@ article {
       font-weight: 900;
       font-size: large;
       color: $pink;
-      margin-left: calc($margin_spacer/4);
+      margin-left: $margin_spacer/4;
     }
     
     .meta-updated{
      font-weight: 900;
       font-size: large;
       color: $cyan_dark;
-      margin-left: calc($margin_spacer/4); 
+      margin-left: $margin_spacer/4; 
     }
     .meta-created{
       font-weight: 900;
       font-size: large;
       color: $pink;
-      margin-left: calc($margin_spacer/4);
+      margin-left: $margin_spacer/4;
     }
 
 
@@ -335,7 +335,7 @@ article {
     ul,
     ol {
       margin-left: $margin_spacer;
-      margin-right: calc($margin_spacer/2);
+      margin-right: $margin_spacer/2;
       line-height: 1.7em;
       margin-bottom: 2em;
     }
@@ -346,8 +346,8 @@ article {
     }
 
     @mixin block_content {
-      margin-top: calc($margin_spacer/2);
-      margin-bottom: calc($margin_spacer/2);
+      margin-top: $margin_spacer/2;
+      margin-bottom: $margin_spacer/2;
     }
 
     twitter-widget {
@@ -358,8 +358,8 @@ article {
 
     blockquote,
     pre {
-      margin-left: calc($margin-spacer * 3 / 2);
-      margin-right: calc($margin_spacer/2);
+      margin-left: $margin-spacer * 3 / 2;
+      margin-right: $margin_spacer/2;
       @include block_content;
       line-height: 1.5em;
       padding: 1em;
@@ -536,19 +536,19 @@ footer {
 //  * Wrapper
 //  */
 .wrapper {
-  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: #{$content-width} - (#{$spacing-unit} * 2);
   margin-right: auto;
   margin-left: auto;
   // padding-right: $spacing-unit;
   // padding-left: $spacing-unit;
   @extend %clearfix;
-  padding-right: calc($spacing-unit / 2);
-  padding-left: calc($spacing-unit / 2);
+  padding-right: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
 
   @include media-query($on-laptop) {
-    max-width: calc(#{$content-width} - (#{$spacing-unit}));
-    margin-right: calc($spacing-unit / 4);
-    margin-left: calc($spacing-unit / 4);
+    max-width: #{$content-width} - (#{$spacing-unit});
+    margin-right: $spacing-unit / 4;
+    margin-left: $spacing-unit / 4;
   }
 
   margin-top:0;
