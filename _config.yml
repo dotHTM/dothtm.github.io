@@ -14,7 +14,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dothtm.psyburr.space" # the base hostname & protocol for your site
 twitter_username: dothtm
 github_username:  dothtm
-mastodon_username:  dothtm
+mastodon_username:  '@dotHTM@mathstodon.xyz'
 
 # Build settings
 markdown: kramdown

@@ -1,0 +1,47 @@
+---
+title: Chat Logs
+layout: page
+permalink: /chatlogs/
+bullet: 🤖
+nav: 300
+---
+<div class="home">
+  
+  <p>These are logs I've had with chatGPT from Open AI. I am rather surprised that it can keep up with shared storytelling, workshopping ideas, and rewriting past ideas for quite a long while.</p>
+  
+  <p>One thing the AI does is create a title for the log after a few volleys. Whether obvious or unusual, here they are as categorized:</p>
+  
+  
+  <ul class="post-list">
+    {% assign doclist = site.pages | sort: 'updated' | sort: 'date' | reverse %}
+    {% for page in doclist %}
+    {%if page.layout == 'chatlog' %}
+    <li>
+      <h2>
+        <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{%if page.bullet%}{{page.bullet }}{%else%}🤖{% endif %} {{ page.title }}</a><br>
+        
+        
+        {% if page.updated %}
+        <span class="meta-updated">Updated: {{ page.updated | date: site.dateformat }}</span>
+        {% endif %}
+
+        {% if page.date %}
+        <span class="meta-created">Created: {{ page.date | date: site.dateformat }}</span>
+        {% endif %}
+        
+        
+        
+        
+      </h2>
+      <p class="post-desc">
+        {% if page.desc %}{{page.desc}}{% endif %}
+      </p>
+    </li>
+    {% else %}
+    <!-- <li>
+      {{ page.title }} - <div>nope</div>
+    </li> -->
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>

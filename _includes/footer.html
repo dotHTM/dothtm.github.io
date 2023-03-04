@@ -8,26 +8,10 @@
         <p><a href="mailto:dothtm@icloud.com?subject=Comment -> {{ page.title }}&amp;body=%23%20Comment%20on%0A%20%20%20%20{{page.url | prepend: site.url }}%0A%0A%23%20Your%20comment%0A%0A%0A%0A%0A%23%20May%20I%20share%20your%20comment%20publicly%3F%0A%0AYes%20/%20No%0A%0A%0A">Have a comment or question?</a>.</p>
       </div>
       <div class="linklist">
-        <div class="linklist-link" style="max-width:48pt;">
-          <a class="github" href="https://github.com/dothtm" alt="Github Repos">
-            {% include icon/roundrect/github.svg %}
-          </a>
-        </div>
-        <div class="linklist-link" style="max-width:48pt;">
-          <a class="twitter" href="https://twitter.com/dothtm" alt="Twitter">
-            {% include icon/roundrect/twitter.svg %}
-          </a>
-        </div>
-        <div class="linklist-link" style="max-width:48pt;">
-          <a class="discord" href="https://discord.gg/REZt2gruYk" alt="Discord">
-            {% include icon/roundrect/discord.svg %}
-          </a>
-        </div>
-        <div class="linklist-link" style="max-width:48pt;">
-          <a class="rss" href="{{ "/feed.xml" | prepend: site.baseurl }}" alt="RSS">
-            {% include icon/roundrect/rss.svg %}
-          </a>
-        </div>
+        <div class="linklist-link" style="max-width:48pt;"><a class="discord" href="https://discord.gg/VuY7NvVq" alt="Discord">{% include icon/roundrect/discord.svg %}</a></div>
+        <div class="linklist-link" style="max-width:48pt;"><a class="rss" href="{{ "/feed.xml" | prepend: site.baseurl }}" alt="RSS">{% include icon/roundrect/rss.svg %}</a></div>
+        <div class="linklist-link" style="max-width:48pt;"><a class="github" href="https://github.com/dothtm" alt="Github Repos">{% include icon/roundrect/github.svg %}</a></div>
+        <div class="linklist-link" style="max-width:48pt;"><a class="mastodon" href="https://mathstodon.xyz/@dotHTM" alt="Mastodon">{% include icon/roundrect/mastodon.svg %}</a></div>
       </div>
       <div class="footer-col footer-col-3">
         <p>{{ site.description }}</p>
