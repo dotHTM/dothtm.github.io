@@ -44,20 +44,10 @@ body {
     repeating-linear-gradient(-$stripe-angle,
     darken($violet, $darken_a),
     darken($violet, $darken_a) $stripe_wide,
-    darken($violet, $darken_b) calc($stripe_wide + $stripe_edge),
-    darken($violet, $darken_b) calc(2*$stripe_wide + $stripe_edge),
-    darken($violet, $darken_a) calc(2*$stripe_wide + 2*$stripe_edge),
+    darken($violet, $darken_b) $stripe_wide + $stripe_edge,
+    darken($violet, $darken_b) 2*$stripe_wide + $stripe_edge,
+    darken($violet, $darken_a) 2*$stripe_wide + 2*$stripe_edge,
     ),
-    
-    
-    
-    
-    // linear-gradient(90deg,
-    // rgba(black, .40) 10%,
-    // transparent 20%,
-    // transparent 100%-20%,
-    // rgba(black, .40) 100%,
-    // ),
   ;
   background-blend-mode: lighten;
 }
