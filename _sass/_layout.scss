@@ -536,7 +536,7 @@ footer {
 //  * Wrapper
 //  */
 .wrapper {
-  max-width: #{$content-width} - (#{$spacing-unit} * 2);
+  max-width: $content-width - ($spacing-unit * 2);
   margin-right: auto;
   margin-left: auto;
   // padding-right: $spacing-unit;
@@ -546,7 +546,7 @@ footer {
   padding-left: $spacing-unit / 2;
 
   @include media-query($on-laptop) {
-    max-width: #{$content-width} - (#{$spacing-unit});
+    max-width: $content-width - ($spacing-unit);
     margin-right: $spacing-unit / 4;
     margin-left: $spacing-unit / 4;
   }
