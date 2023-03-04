@@ -2,22 +2,24 @@
 <html>
 {% include head.html %}
 <body>
+  <div id="pinkbar"></div>
   {% include header.html %}
-  <div class="page-content">
-    <article class="post">
-      {% include post-header.html %}
-      <div class="wrapper">
-        <div class="post-content">
-          {% if page.image %}
-          <img src="{{ page.image | absoute_url }}" />
-          {% else if layout.default_image %}
-          <img src="{{ layout.default_image | absoute_url }}" />
-          {% endif %}
-          {{ content }}
+    <div class="page-content">
+      <article class="post">
+        {% include post-header.html %}
+        <div class="wrapper">
+          <div class="post-content">
+            {% if page.image %}
+            <img src="{{ page.image | absoute_url }}" />
+            {% else if layout.default_image %}
+            <img src="{{ layout.default_image | absoute_url }}" />
+            {% endif %}
+            {{ content }}
+          </div>
         </div>
-      </div>
-    </article>
-  </div>
-  {% include footer.html %}
+      </article>
+    </div>
+    {% include footer.html %}
+  <div id="cyanbar"></div>
 </body>
 </html>
