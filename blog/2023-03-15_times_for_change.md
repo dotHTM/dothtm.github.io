@@ -1,7 +1,7 @@
 ---
 title: Times for Change.
 date: 2023-03-15T22:04:34-05:00
-layout: post
+layout: blog
 ---
 
 Today was full of the emotional spectrum.
