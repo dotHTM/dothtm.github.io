@@ -1,6 +1,6 @@
 ---
 title: Times for Change.
-date: 2023-03-15T22:04:34-05:00
+date: 2023-03-15 22:04:34
 layout: blog
 ---
 
