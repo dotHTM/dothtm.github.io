@@ -1,0 +1,54 @@
+---
+title: Personal Blog
+navtitle: Blog
+layout: page
+permalink: /blog/
+bullet: 📓
+nav: 100
+---
+<div class="home">
+
+<p>I used to LiveJournal.</p>
+
+<p>I used to Tumblr.</p>
+
+<p>I used to Tweet.</p>
+
+<p>Here, I am.</p>
+
+<em>In my writings here, I represent only myself. I never speak on behalf of my employer, any spiritual apparation, or anyone of notarity.<sup>[citation needed, weasle words]</sup></em>
+  
+  
+  <ul class="post-list">
+    {% assign doclist = site.pages | sort: 'updated' | sort: 'date' | reverse %}
+    {% for page in doclist %}
+    {% if page.layout == 'post' %}
+    <li>
+      <h2>
+        <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{%if page.bullet%}{{page.bullet }}{%else%}📓{% endif %} {{ page.title }}</a><br>
+        
+        
+        {% if page.updated %}
+        <span class="meta-updated">Updated: {{ page.updated | date: site.dateformat }}</span>
+        {% endif %}
+
+        {% if page.date %}
+        <span class="meta-created">Created: {{ page.date | date: site.dateformat }}</span>
+        {% endif %}
+        
+        
+        
+        
+      </h2>
+      <p class="post-desc">
+        {% if page.desc %}{{page.desc}}{% endif %}
+      </p>
+    </li>
+    {% else %}
+    <!-- <li>
+      {{ page.title }} - <div>nope</div>
+    </li> -->
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
