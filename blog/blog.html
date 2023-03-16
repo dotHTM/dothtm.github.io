@@ -22,7 +22,7 @@ nav: 100
   <ul class="post-list">
     {% assign doclist = site.pages | sort: 'updated' | sort: 'date' | reverse %}
     {% for page in doclist %}
-    {% if page.layout == 'post' %}
+    {% if page.layout == 'blog' %}
     <li>
       <h2>
         <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{%if page.bullet%}{{page.bullet }}{%else%}📓{% endif %} {{ page.title }}</a><br>
