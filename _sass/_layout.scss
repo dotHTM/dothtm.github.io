@@ -10,6 +10,7 @@ $green_dark: hsl(130, 100%, 25%);
 $pink: hotpink;
 $pink_dark: hsl(330, 100%, 30%);
 $yellow: lighten(yellow, 35%);
+$darkyellow: darken(yellow, 25%);
 
 $cyan: cyan;
 $cyan_dark: darken(cyan, 10);
@@ -378,6 +379,12 @@ article {
     font-weight: 900;
     font-size: large;
     color: $pink;
+    margin-left: $margin_spacer *0.25 ;
+  }
+    .meta-version{
+    font-weight: 900;
+    font-size: large;
+    color: $darkyellow;
     margin-left: $margin_spacer *0.25 ;
   }
 
