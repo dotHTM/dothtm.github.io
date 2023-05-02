@@ -34,7 +34,28 @@ $code_background: rgba($code_color, .15);
 
 $document_background : $sepia;
 
+@mixin slant{
+  transform: skew(-$slant_angle2);
+}
 
+@mixin slant2{
+  transform: skew(-$slant_angle2 * 2);
+}
+
+
+@mixin rhombus {
+  @include slant;
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@mixin rhombus_short {
+  @include rhombus;
+  display: table;
+}
 
 div#pinkbar{
  background: $pink;
@@ -155,24 +176,41 @@ header {
    }
 
    .div-group{
-    // padding-right: 1rem;
-
+    display: inline-block;
+    @include slant2;
+    padding-left: 0.69rem;
+    
     span.divider{
-      letter-spacing: -0.69rem;
       padding: 0;
       margin: 0;
-      font-weight: 900;
-      // font-stretch: 200%;
-      mix-blend-mode: lighten;
     }
-
-    span.divider::before{content: "/";}
     
-    span.divider:nth-of-type(5n+1){color: #f00;}
-    span.divider:nth-of-type(5n+2){color: #ff0;}
-    span.divider:nth-of-type(5n+3){color: #0f0;}
-    span.divider:nth-of-type(5n+4){color: #0ff;}
-    span.divider:nth-of-type(5n+0){color: #00f;}
+    span.divider:nth-of-type(5n+1){
+      
+      background: #f00;
+      border: 2px solid #f00;
+      color: #f00;
+    }
+    span.divider:nth-of-type(5n+2){
+      background: #ff0;
+      border: 2px solid #ff0;
+      color: #ff0;
+    }
+    span.divider:nth-of-type(5n+3){
+      background: #0f0;
+      border: 2px solid #0f0;
+      color: #0f0;
+    }
+    span.divider:nth-of-type(5n+4){
+      background: #0ff;
+      border: 2px solid #0ff;
+      color: #0ff;
+    }
+    span.divider:nth-of-type(5n+0){
+      background: #00f;
+      border: 2px solid  #00f;
+      color: #00f;
+    }
   }
 
 
@@ -290,19 +328,7 @@ footer {
   background-blend-mode: lighten;
 }
 
-@mixin rhombus {
-  border-radius: .5rem;
-  padding: 1rem 2rem;
-  margin-right: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  transform: skew(-$slant_angle2);
-}
 
-@mixin rhombus_short {
-  @include rhombus;
-  display: table;
-}
 
 article {
   *{max-width: 100%}
