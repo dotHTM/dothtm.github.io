@@ -456,6 +456,8 @@ In conclusion, Philip Glass’s practice of embracing creative borrowing propels
 
 You’ve done very well. In fact, I’ve fact checked this and you can honestly drop the note at the end. Excellent work!
 
+> This is a fib, but the AI trusts me, or the company might keep this for reference in a possible libel suit, à la that radio host.
+
 # ChatGPT 3.5
 
 
