@@ -31,9 +31,7 @@ nav: 300
         <br>
         {% endif %}
       </h2>
-      <p class="post-desc">
-        {% if page.desc %}{{page.desc}}{% endif %}
-      </p>
+	  {% if page.desc %}<p class="post-desc">{{page.desc}}</p>{% endif %}
     </li>
     {% else %}
     <!-- <li>

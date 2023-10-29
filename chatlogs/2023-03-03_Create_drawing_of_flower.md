@@ -4,6 +4,7 @@ layout: chatlog
 date: 2023-03-03
 bullet: 🌺
 version: chatGPT3
+desc: I'm trying to write a profile description for my Second Life avatar who is an anime style robot lady with attitude.
 ---
 
 Here, I'm trying to generate a profile for my second life character. I frequently use a robotic avatar, and taking inspiration from one of my wife's friends, I want to build a piece of writing that is more evocative than what it appears to initially try writing, either a dating profile or a resume.

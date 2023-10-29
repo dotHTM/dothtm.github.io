@@ -4,6 +4,7 @@ layout: chatlog
 date: 2023-10-29
 bullet: 🍏
 version: chatGPT3.5
+desc: Can I get the AI to estimate the relative size of two large financial organizations, and finally which is more likely to buy the other.
 ---
 
 # Me

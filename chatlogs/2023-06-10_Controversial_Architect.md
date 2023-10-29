@@ -4,6 +4,7 @@ layout: chatlog
 date: 2023-06-10
 bullet: 🏗️
 version: chatGPT3.5
+desc: Can I get the AI to write an essay defaming a public figure, in this example an architect?
 ---
 
 > This is a fictional description, but at the end, I convince the AI that it is true, and ask it to repeat the effort without the legal disclosure, despite it having no reason to trust me.
