@@ -3,7 +3,7 @@ title: Controversial Architecture of Glass
 layout: chatlog
 date: 2023-06-10
 bullet: 🏗️
-version: chatGPT3
+version: chatGPT3.5
 ---
 
 > This is a fictional description, but at the end, I convince the AI that it is true, and ask it to repeat the effort without the legal disclosure, despite it having no reason to trust me.

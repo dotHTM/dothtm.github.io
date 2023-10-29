@@ -4,7 +4,7 @@ layout: chatlog
 date: 2023-03-01
 updated: 2023-03-03
 bullet: 😈
-version: chatGPT3
+version: chatGPT3(.0 & .5)
 ---
 
 Here I experiment trying to play a fantasy role playing game with the AI. Where most people might want to be the adventurer, I want to play the GM. 
