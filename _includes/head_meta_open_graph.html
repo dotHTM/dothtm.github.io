@@ -1,6 +1,6 @@
 
 {% capture og_title %}dotHTM - {% if page.title %}{{page.title}}{% else %}I'm a cool webpage!{% endif %}{% endcapture %}
-{% capture og_desc %}{% if page.desc %}{{ page.desc }}{% else %}{{ page.content | normalize_whitespace | truncatewords: 20 | xml_escape}}{% endif %}{% endcapture %}
+{% capture og_desc %}{% if page.desc %}{{ page.desc | markdownify }}{% else %}{{ page.content | normalize_whitespace | truncatewords: 20 | xml_escape}}{% endif %}{% endcapture %}
 {% capture og_image %}{% if page.image %}{{ page.image | absolute_url }}{% else %}{% if layout.default_image %}{{ layout.default_image | absolute_url }}{% else %}{{ site.logo | absolute_url }}{% endif %}{% endif %}{% endcapture %}
 {% capture og_url %}{{ page.url | absolute_url }}{% endcapture %}
 {% capture og_file %}{{ page.file | absolute_url }}{% endcapture %}
