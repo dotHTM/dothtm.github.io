@@ -2,6 +2,8 @@
 title: Times for Change.
 date: 2023-03-15
 layout: blog
+desc: Today was full of the emotional spectrum.
+hidedesc: true
 ---
 
 Today was full of the emotional spectrum.

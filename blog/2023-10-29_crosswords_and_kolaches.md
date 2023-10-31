@@ -2,6 +2,7 @@
 title: Crosswords and Kolaches
 date: 2023-10-29
 layout: blog
+desc: Adrift in the sea, we adult like never before.
 ---
 
 My wife has been in orbit of her grandfather the last few weeks, almost a month in total. His health has been in decline for some time, leading to a Congestive Heart Failure diagnosis (I'm not sure if this is recent to his decline or not). Since the begining of October, he's been taken to the ER I think four times. And finally I've been here with her and him the last week, as they've transistioned him to a "home hospice" care scenario.
@@ -20,7 +21,7 @@ The next morning, early in the AM, I got a call that she passed. I couldn’t de
 
 I was there the night before her last, I held her hand from the fold out couch in her room, so I was parallel to her bed. She didn’t have much motor control left from the previous restraints.
 
----
+Snap back to reality…
 
 “Papaw” still smiles and thanks me as I take my turns to help, try and empathize with this man who’s always called me handsome when we met at family events, and I’ve returned the compliment.
 

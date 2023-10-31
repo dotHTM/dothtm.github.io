@@ -16,13 +16,10 @@ nav: 400
         {% if page.updated or page.date %}{% if page.updated %}{% assign new_date = page.updated %}{% else %}{% assign new_date = page.date %}{% endif %}- <span class="post-meta">{{ new_date | date: site.dateformat }}</span>{% endif %}
       </h2>
       <p class="post-desc">
-        {% if page.desc %}{{page.desc}}{% endif %}
+        {% if page.desc %}{{ page.desc | markdownify }}{% endif %}
       </p>
     </li>
     {% else %}
-    <!-- <li>
-      {{ page.title }} - <div>nope</div>
-    </li> -->
     {% endif %}
     {% endfor %}
   </ul>

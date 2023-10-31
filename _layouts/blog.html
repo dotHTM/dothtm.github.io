@@ -2,4 +2,8 @@
 layout: default
 default_bullet: 📓
 ---
+{% if page.desc and not page.hidedesc %} 
+	{{ page.desc | markdownify }}
+	<hr>
+{% endif %}
 {{ content }}

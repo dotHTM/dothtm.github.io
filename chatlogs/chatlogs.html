@@ -31,12 +31,9 @@ nav: 300
         <br>
         {% endif %}
       </h2>
-	  {% if page.desc %}<p class="post-desc">{{page.desc}}</p>{% endif %}
+	  {% if page.desc %}<p class="post-desc">{{ page.desc | markdownify }}</p>{% endif %}
     </li>
     {% else %}
-    <!-- <li>
-      {{ page.title }} - <div>nope</div>
-    </li> -->
     {% endif %}
     {% endfor %}
   </ul>
