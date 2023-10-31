@@ -6,8 +6,11 @@ default_bullet: 🤖
 	<span class="meta-version">Version: {{ page.version }}</span>
 	<br>
 {% endif %}
-{% if page.desc and not page.hidedesc %} 
-	{{ page.desc | markdownify }}
-	<hr>
+{% if page.desc %} 
+	{% if page.hidedesc %} 
+	{% else %} 
+		{{ page.desc | markdownify }}
+		<hr>
+	{% endif %}
 {% endif %}
 {{ content }}
