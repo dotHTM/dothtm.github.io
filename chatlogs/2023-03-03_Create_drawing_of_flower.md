@@ -5,13 +5,14 @@ date: 2023-03-03
 bullet: 🌺
 version: chatGPT3
 desc: I'm trying to write a profile description for my Second Life avatar who is an anime style robot lady with attitude.
+hidedesc: true
 ---
 
 Here, I'm trying to generate a profile for my second life character. I frequently use a robotic avatar, and taking inspiration from one of my wife's friends, I want to build a piece of writing that is more evocative than what it appears to initially try writing, either a dating profile or a resume.
 
 I'm rather impressed by this log, as the AI is able to change scenes, return to old ones, take criticism, and take another crack at the request.
 
-I'm not surprised that we bump up against the service's PG filter, but I'm delighted to realize the AI can be negotiated with, while it maintains it will keep within it's PG boundaries.
+I'm not surprised that we bump up against the service's PG filter, but I'm delighted to realize the AI can be negotiated with, while it maintains it will keep within its PG boundaries.
 
 Here, I direct the AI to write for a character somewhere between the "Terminator" and Lisa from "Weird Science".
 

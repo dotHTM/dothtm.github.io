@@ -6,6 +6,7 @@ updated: 2023-03-03
 bullet: 😈
 version: chatGPT3(.0 & .5)
 desc: Other people have setup OpenAI as the DM in a D&D like setting, but what if I try to play the DM and the AI has to be the player?
+hidedesc: true
 ---
 
 Here I experiment trying to play a fantasy role playing game with the AI. Where most people might want to be the adventurer, I want to play the GM. 
