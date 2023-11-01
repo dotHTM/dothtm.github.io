@@ -2,7 +2,7 @@
 title: Crosswords and Kolaches
 date: 2023-10-29
 layout: blog
-desc: Adrift in the sea, we adult like never before.
+desc: We’re a happy family, adrift on a nurse’s holiday.
 ---
 
 My wife has been in orbit of her grandfather the last few weeks, almost a month in total. His health has been in decline for some time, leading to a Congestive Heart Failure diagnosis (I'm not sure if this is recent to his decline or not). Since the begining of October, he's been taken to the ER I think four times. And finally I've been here with her and him the last week, as they've transistioned him to a "home hospice" care scenario.
