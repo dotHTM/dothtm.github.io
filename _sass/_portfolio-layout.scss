@@ -19,11 +19,14 @@ $stripe_wide: 30px;
 $stripe_edge: 5px;
 $slant_angle: 17deg;
 $slant_angle2: 7deg;
-$darken_a: 27%;
-$darken_b: 35%;
+$darken_a: 82%;
+$darken_b: 73%;
 $stripe-angle: 90deg+$slant_angle;
 
-$sepia: hsl(50, 100%, 90%);
+$highlight-sepia: hsl(50, 100%, 90%);
+
+
+$sepia: hsl(50, 100%, 5%);
 
 $title_text_color: white;
 $text_color: $violet_dark;
@@ -381,11 +384,47 @@ article {
     }
   }
 
+
+
+
+
   .post-content {
+    
+    
     margin-top: 0rem;
     margin-bottom: 2rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+
+   p:has(img),
+    p:has(video) {
+    margin: 0rem;
+        background-image: 
+         linear-gradient(0deg, $sepia, rgba($sepia, 0)),
+          radial-gradient(     $highlight-sepia 50%,     $sepia 70% ), 
+        ;
+     img,
+      video, .spotlight-image{
+      padding: 5rem;
+      width: 75%;
+      margin: auto;
+      filter: drop-shadow(0px 25px 15px $sepia);
+     }
+   
+    }
+
+   p:not(:has(img)), .plaque
+   {
+    color: black;
+    background: white;
+    margin: 0rem 2rem 2rem 2rem;
+    ul{ list-style-type: "- ";}
+    }
+      .plaque{padding: 1rem;}
+
+    p:not(:has(img)){
+      padding: 2rem;
+    }
 
     .post-meta {
       font-weight: 900;

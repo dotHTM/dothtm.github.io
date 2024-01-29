@@ -1,0 +1,27 @@
+---
+title: Portfolio
+layout: portfolio
+permalink: /art/
+bullet: 🎨
+nav: 500
+---
+<div class="home">
+  <ul class="post-list">
+    {% assign doclist = site.pages | sort: 'updated' | sort: 'date' | reverse %}
+    {% for page in doclist %}
+    {%if page.layout == 'art' %}
+    <li>
+      {% if page.image %}<p><img class="portfolio-image" src='{{ page.image }}'></p>{% endif %}
+        {% if page.desc %}
+      <p class="post-desc">
+        <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{%if page.bullet%}{{page.bullet }}{%else%}{{layout.default_bullet}}{% endif %} {%if page.signed%}#{{page.signed}}, {%endif%}  {{ page.title }}</a>
+        {% if page.updated or page.date %}{% if page.updated %}{% assign new_date = page.updated %}{% else %}{% assign new_date = page.date %}{% endif %}- <span class="post-meta">{{ new_date | date: site.dateformat }}</span>{% endif %}
+        <br>{{ page.desc  }}
+      </p>
+        {% endif %}
+    </li>
+    {% else %}
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
