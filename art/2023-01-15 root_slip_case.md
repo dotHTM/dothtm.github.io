@@ -20,7 +20,7 @@ desc: Tuck box for cards.
 signed: 13
 ---
 
-![](/art/image/root_slip_case_open.jpeg)
+![]({{ "/art/image/root_slip_case_open.jpeg" | absolute_url }})
 
 The slip case holds two books by Magpie Games, two telescoping boxes containing dice and cards for equipment and NPCs, and a three-panel half-height GM screen.
 
