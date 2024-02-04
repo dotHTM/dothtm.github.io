@@ -1,6 +1,6 @@
 ---
 title: Day One with Apple Vision Pro
-date: 2023-02-03
+date: 2024-02-03
 layout: blog
 desc: A naive, short-sighted, first impression of the hot new Apple device.
 ---
