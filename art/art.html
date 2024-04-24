@@ -12,7 +12,7 @@ desc: Art and Crafts Portfolio
     {% for page in doclist %}
     {%if page.layout == 'art' %}
     <li>
-      {% if page.image %}<p><a class="post-link" href="{{ page.url | prepend: site.baseurl }}"><img class="portfolio-image" src='{{ page.image }}'></a></p>{% endif %}
+      {% if page.image %}<p class="portfolio-spotlight"><a class="post-link" href="{{ page.url | prepend: site.baseurl }}"><img class="portfolio-image" src='{{ page.image }}'></a></p>{% endif %}
         {% if page.desc %}
       <p class="post-desc">
         <a class="post-link" href="{{ page.url | prepend: site.baseurl }}">{%if page.bullet%}{{page.bullet }}{%else%}{{layout.default_bullet}}{% endif %} {%if page.signed%}#{{page.signed}}, {%endif%}  {{ page.title }}</a>
