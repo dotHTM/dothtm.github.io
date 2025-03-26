@@ -1,3 +1,6 @@
+@use 'sass:color';
+
+
 $spacing-unit: 20px;
 
 $logo_size : 256px;
@@ -6,7 +9,8 @@ $violet: hsl(260, 100%, 10%);
 $green: lime;
 $green_dark: hsl(130, 100%, 10%);
 $pink: hotpink;
-$yellow: lighten(yellow, 35%);
+$yellow: color.adjust(yellow, $lightness: 35%);
+
 $text_color: rgba($yellow, 70%);
 $subdue_color: rgba($yellow, 50%);
 $blockquote_color: rgba($yellow, 15%);
@@ -22,8 +26,8 @@ $stripe-angle: 90deg+$slant_angle;
 
 @mixin bi_light_1 {
   background: repeating-linear-gradient(90deg,
-    lighten($violet, 4%),
-    darken($pink, 50%) 100%,
+    color.adjust($violet, $lightness: 4%),
+    color.adjust($pink, $lightness: -50%) 100%,
     ),
     repeating-linear-gradient(0deg,
     transparent,
@@ -35,8 +39,8 @@ $stripe-angle: 90deg+$slant_angle;
 @mixin bi_light_2 {
   background:
     repeating-linear-gradient(0deg,
-    lighten($violet, 4%),
-    darken($green, 35%) 100%,
+    color.adjust($violet, $lightness: 4%),
+    color.adjust($green,$lightness: -35%) 100%,
     ),
     repeating-linear-gradient(-90deg,
     transparent,
@@ -48,8 +52,8 @@ $stripe-angle: 90deg+$slant_angle;
 @mixin bi_light_3 {
   background:
     repeating-linear-gradient(90deg,
-    lighten($violet, 4%),
-    darken(cyan, 35%) 100%,
+    color.adjust($violet, $lightness: 4%),
+    color.adjust(cyan,$lightness: -35%) 100%,
     ),
     repeating-linear-gradient(180deg,
     transparent,
@@ -61,8 +65,8 @@ $stripe-angle: 90deg+$slant_angle;
 @mixin bi_light_3 {
   background:
     repeating-linear-gradient(90deg,
-    lighten($violet, 14%),
-    darken(cyan, 25%) 100%,
+    color.adjust($violet, $lightness: 14%),
+    color.adjust(cyan,$lightness: -25%) 100%,
     ),
     repeating-linear-gradient(180deg,
     transparent,

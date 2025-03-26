@@ -1,19 +1,23 @@
+@use "sass:color";
+
+$content-width: 800px;
+$color_rotate : 0;
 $spacing-unit: 20px;
-$violet_dark: hsl(260, 50%, 30%);
-$violet: hsl(260, 50%, 80%);
+$violet_dark: hsl($color_rotate+260, 50%, 30%);
+$violet: hsl($color_rotate+260, 50%, 80%);
 
-$pinkish_violet: hsl(300, 50%, 80%);
-$cyanish_violet: hsl(200, 50%, 80%);
+$pinkish_violet: hsl($color_rotate+300, 50%, 80%);
+$cyanish_violet: hsl($color_rotate+200, 50%, 80%);
 
-$green: lime;
-$green_dark: hsl(130, 100%, 25%);
-$pink: hotpink;
-$pink_dark: hsl(330, 100%, 30%);
-$yellow: lighten(yellow, 35%);
-$darkyellow: darken(yellow, 25%);
+$green: color.adjust(lime, $hue: $color_rotate);
+$green_dark: hsl($color_rotate+130, 100%, 25%);
+$pink: color.adjust(hotpink, $hue: $color_rotate);
+$pink_dark: hsl($color_rotate+330, 100%, 30%);
+$yellow: color.adjust(yellow, $lightness: 35%);
+$darkyellow: color.adjust(yellow, $lightness: -25%);
 
-$cyan: cyan;
-$cyan_dark: darken(cyan, 10);
+$cyan: color.adjust(cyan, $hue: $color_rotate);
+$cyan_dark: color.adjust(cyan, $lightness: -10%);
 
 $stripe_wide: 30px;
 $stripe_edge: 5px;
@@ -23,13 +27,13 @@ $darken_a: 27%;
 $darken_b: 35%;
 $stripe-angle: 90deg+$slant_angle;
 
-$sepia: hsl(50, 100%, 90%);
+$sepia: hsl($color_rotate+50, 100%, 90%);
 
 $title_text_color: white;
 $text_color: $violet_dark;
 $subdue_color: rgba($yellow, .50);
 
-$code_color : darken($cyan_dark, 10);
+$code_color : color.adjust($cyan_dark, $lightness: -10%);
 $code_background: rgba($code_color, .15);
 
 $document_background : $sepia;
@@ -93,13 +97,13 @@ body {
     rgba($cyan, .20),
     ),
   repeating-linear-gradient(-$stripe-angle,
-    darken($violet, $darken_a),
-    darken($violet, $darken_a) $stripe_wide,
-    darken($pinkish_violet, $darken_b) $stripe_wide + ($stripe_edge*0.5),
-    darken($violet, $darken_b) $stripe_wide + $stripe_edge,
-    darken($violet, $darken_b) 2*$stripe_wide + $stripe_edge,
-    darken($cyanish_violet, $darken_b) 2*$stripe_wide + ($stripe_edge*3*0.5),
-    darken($violet, $darken_a) 2*$stripe_wide + 2*$stripe_edge,
+    color.adjust($violet, $lightness: -$darken_a),
+    color.adjust($violet, $lightness: -$darken_a) $stripe_wide,
+    color.adjust($pinkish_violet, $lightness: -$darken_b) $stripe_wide + ($stripe_edge*0.5),
+    color.adjust($violet, $lightness: -$darken_b) $stripe_wide + $stripe_edge,
+    color.adjust($violet, $lightness: -$darken_b) 2*$stripe_wide + $stripe_edge,
+    color.adjust($cyanish_violet, $lightness: -$darken_b) 2*$stripe_wide + ($stripe_edge*3*0.5),
+    color.adjust($violet, $lightness: -$darken_a) 2*$stripe_wide + 2*$stripe_edge,
     ),
   ;
   background-blend-mode: lighten;
@@ -252,11 +256,11 @@ footer {
 
     &:hover,
     &:hover:visited {
-      color: lighten($green_dark, 20%);
+      color: color.adjust($green_dark, $lightness: 20%);
     }
 
     &:visited {
-      color: lighten($green_dark, 10%);
+      color: color.adjust($green_dark, $lightness: 10%);
     }
   }
 }
@@ -282,8 +286,8 @@ footer {
     rgba(white, 0.0) 100%,
     ),
   repeating-linear-gradient(90deg,
-    lighten($violet_dark, 4%),
-    darken($pink, 50%) 100%,
+    color.adjust($violet_dark, $lightness: 4%),
+    color.adjust($pink, $lightness: -50%) 100%,
     ),
   repeating-linear-gradient(0deg,
     transparent,
@@ -300,8 +304,8 @@ footer {
     rgba(white, 0.0) 100%,
     ),
   repeating-linear-gradient(0deg,
-    lighten($violet_dark, 4%),
-    darken($green, 35%) 100%,
+    color.adjust($violet_dark, $lightness: 4%),
+    color.adjust($green, $lightness: -35%) 100%,
     ),
   repeating-linear-gradient(-90deg,
     transparent,
@@ -318,8 +322,8 @@ footer {
     rgba(white, 0.0) 100%,
     ),
   repeating-linear-gradient(90deg,
-    lighten($violet_dark, 4%),
-    darken($cyan, 35%) 100%,
+    color.adjust($violet_dark, $lightness: 4%),
+    color.adjust($cyan, $lightness: -35%) 100%,
     ),
   repeating-linear-gradient(180deg,
     transparent,
@@ -343,7 +347,7 @@ article {
 
     strong {
       font-weight: $date_weight !important;
-      color: lighten($green, 10);
+      color: color.adjust($green, $lightness: 10%);
     }
 
 
@@ -632,17 +636,12 @@ footer {
   padding-right: $spacing-unit *0.5;
   padding-left: $spacing-unit *0.5;
 
-  @include media-query($on-laptop) {
-    max-width: $content-width - ($spacing-unit);
-    margin-right: $spacing-unit  *0.25 ;
-    margin-left: $spacing-unit  *0.25 ;
-  }
-
   margin-top:0;
   margin-bottom:0;
 
   padding-top: $spacing-unit;
   padding-bottom: $spacing-unit;
+  
 }
 
 /**
@@ -655,22 +654,3 @@ footer {
     clear: both;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

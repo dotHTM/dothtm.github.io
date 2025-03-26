@@ -1,7 +1,7 @@
 ---
  # Only the main Sass file needs front matter (the dashes are enough) 
 ---
-@charset "utf-8";
+@use "sass:color";
 
 // Our variables
 $base-font-family: "Helvetica Neue",
@@ -19,15 +19,12 @@ $text-color: #fff;
 $background-color: #111;
 $brand_color: #f00;
 
-
 $brand_1: #60f;
 $brand_2: #0f0;
 
-
-
 $grey-color: #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark: darken($grey-color, 25%);
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark: color.adjust($grey-color, $lightness: -25%);
 
 // Width of the content area
 $content-width: 800px;
@@ -36,26 +33,25 @@ $on-palm: 600px;
 $on-laptop: 800px;
 
 
+@charset "utf-8";
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
+// Import partials from `sass_dir` (defaults to `_sass`)
+@use "module";
+@use "base";
+@use "portfolio-layout";
+@use "syntax-highlighting";
+
+
 @mixin media-query($device) {
+  // Use media queries like this:
+  // @include media-query($on-palm) {
+  //     .wrapper {
+  //         padding-right: $spacing-unit / 2;
+  //         padding-left: $spacing-unit / 2;
+  //     }
+  // }
   @media screen and (max-width: $device) {
     @content;
   }
 }
 
-
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import 
-"module"
-,"base"
-,"portfolio-layout"
-,"syntax-highlighting"
-;
