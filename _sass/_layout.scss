@@ -9,15 +9,15 @@ $violet: hsl($color_rotate+260, 50%, 80%);
 $pinkish_violet: hsl($color_rotate+300, 50%, 80%);
 $cyanish_violet: hsl($color_rotate+200, 50%, 80%);
 
-$green: color.adjust(lime, $hue: $color_rotate);
+$green: adjust-color(lime, $hue: $color_rotate);
 $green_dark: hsl($color_rotate+130, 100%, 25%);
-$pink: color.adjust(hotpink, $hue: $color_rotate);
+$pink: adjust-color(hotpink, $hue: $color_rotate);
 $pink_dark: hsl($color_rotate+330, 100%, 30%);
-$yellow: color.adjust(yellow, $lightness: 35%);
-$darkyellow: color.adjust(yellow, $lightness: -25%);
+$yellow: adjust-color(yellow, $lightness: 35%);
+$darkyellow: adjust-color(yellow, $lightness: -25%);
 
-$cyan: color.adjust(cyan, $hue: $color_rotate);
-$cyan_dark: color.adjust(cyan, $lightness: -10%);
+$cyan: adjust-color(cyan, $hue: $color_rotate);
+$cyan_dark: adjust-color(cyan, $lightness: -10%);
 
 $stripe_wide: 30px;
 $stripe_edge: 5px;
@@ -33,7 +33,7 @@ $title_text_color: white;
 $text_color: $violet_dark;
 $subdue_color: rgba($yellow, .50);
 
-$code_color : color.adjust($cyan_dark, $lightness: -10%);
+$code_color : adjust-color($cyan_dark, $lightness: -10%);
 $code_background: rgba($code_color, .15);
 
 $document_background : $sepia;
@@ -97,13 +97,13 @@ body {
     rgba($cyan, .20),
     ),
   repeating-linear-gradient(-$stripe-angle,
-    color.adjust($violet, $lightness: -$darken_a),
-    color.adjust($violet, $lightness: -$darken_a) $stripe_wide,
-    color.adjust($pinkish_violet, $lightness: -$darken_b) $stripe_wide + ($stripe_edge*0.5),
-    color.adjust($violet, $lightness: -$darken_b) $stripe_wide + $stripe_edge,
-    color.adjust($violet, $lightness: -$darken_b) 2*$stripe_wide + $stripe_edge,
-    color.adjust($cyanish_violet, $lightness: -$darken_b) 2*$stripe_wide + ($stripe_edge*3*0.5),
-    color.adjust($violet, $lightness: -$darken_a) 2*$stripe_wide + 2*$stripe_edge,
+    adjust-color($violet, $lightness: -$darken_a),
+    adjust-color($violet, $lightness: -$darken_a) $stripe_wide,
+    adjust-color($pinkish_violet, $lightness: -$darken_b) $stripe_wide + ($stripe_edge*0.5),
+    adjust-color($violet, $lightness: -$darken_b) $stripe_wide + $stripe_edge,
+    adjust-color($violet, $lightness: -$darken_b) 2*$stripe_wide + $stripe_edge,
+    adjust-color($cyanish_violet, $lightness: -$darken_b) 2*$stripe_wide + ($stripe_edge*3*0.5),
+    adjust-color($violet, $lightness: -$darken_a) 2*$stripe_wide + 2*$stripe_edge,
     ),
   ;
   background-blend-mode: lighten;
@@ -256,11 +256,11 @@ footer {
 
     &:hover,
     &:hover:visited {
-      color: color.adjust($green_dark, $lightness: 20%);
+      color: adjust-color($green_dark, $lightness: 20%);
     }
 
     &:visited {
-      color: color.adjust($green_dark, $lightness: 10%);
+      color: adjust-color($green_dark, $lightness: 10%);
     }
   }
 }
@@ -286,8 +286,8 @@ footer {
     rgba(white, 0.0) 100%,
     ),
   repeating-linear-gradient(90deg,
-    color.adjust($violet_dark, $lightness: 4%),
-    color.adjust($pink, $lightness: -50%) 100%,
+    adjust-color($violet_dark, $lightness: 4%),
+    adjust-color($pink, $lightness: -50%) 100%,
     ),
   repeating-linear-gradient(0deg,
     transparent,
@@ -304,8 +304,8 @@ footer {
     rgba(white, 0.0) 100%,
     ),
   repeating-linear-gradient(0deg,
-    color.adjust($violet_dark, $lightness: 4%),
-    color.adjust($green, $lightness: -35%) 100%,
+    adjust-color($violet_dark, $lightness: 4%),
+    adjust-color($green, $lightness: -35%) 100%,
     ),
   repeating-linear-gradient(-90deg,
     transparent,
@@ -322,8 +322,8 @@ footer {
     rgba(white, 0.0) 100%,
     ),
   repeating-linear-gradient(90deg,
-    color.adjust($violet_dark, $lightness: 4%),
-    color.adjust($cyan, $lightness: -35%) 100%,
+    adjust-color($violet_dark, $lightness: 4%),
+    adjust-color($cyan, $lightness: -35%) 100%,
     ),
   repeating-linear-gradient(180deg,
     transparent,
@@ -347,7 +347,7 @@ article {
 
     strong {
       font-weight: $date_weight !important;
-      color: color.adjust($green, $lightness: 10%);
+      color: adjust-color($green, $lightness: 10%);
     }
 
 

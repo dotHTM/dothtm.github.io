@@ -9,7 +9,7 @@ $violet: hsl(260, 100%, 10%);
 $green: lime;
 $green_dark: hsl(130, 100%, 10%);
 $pink: hotpink;
-$yellow: color.adjust(yellow, $lightness: 35%);
+$yellow: adjust-color(yellow, $lightness: 35%);
 
 $text_color: rgba($yellow, 70%);
 $subdue_color: rgba($yellow, 50%);
@@ -26,8 +26,8 @@ $stripe-angle: 90deg+$slant_angle;
 
 @mixin bi_light_1 {
   background: repeating-linear-gradient(90deg,
-    color.adjust($violet, $lightness: 4%),
-    color.adjust($pink, $lightness: -50%) 100%,
+    adjust-color($violet, $lightness: 4%),
+    adjust-color($pink, $lightness: -50%) 100%,
     ),
     repeating-linear-gradient(0deg,
     transparent,
@@ -39,8 +39,8 @@ $stripe-angle: 90deg+$slant_angle;
 @mixin bi_light_2 {
   background:
     repeating-linear-gradient(0deg,
-    color.adjust($violet, $lightness: 4%),
-    color.adjust($green,$lightness: -35%) 100%,
+    adjust-color($violet, $lightness: 4%),
+    adjust-color($green,$lightness: -35%) 100%,
     ),
     repeating-linear-gradient(-90deg,
     transparent,
@@ -52,8 +52,8 @@ $stripe-angle: 90deg+$slant_angle;
 @mixin bi_light_3 {
   background:
     repeating-linear-gradient(90deg,
-    color.adjust($violet, $lightness: 4%),
-    color.adjust(cyan,$lightness: -35%) 100%,
+    adjust-color($violet, $lightness: 4%),
+    adjust-color(cyan,$lightness: -35%) 100%,
     ),
     repeating-linear-gradient(180deg,
     transparent,
@@ -65,8 +65,8 @@ $stripe-angle: 90deg+$slant_angle;
 @mixin bi_light_3 {
   background:
     repeating-linear-gradient(90deg,
-    color.adjust($violet, $lightness: 14%),
-    color.adjust(cyan,$lightness: -25%) 100%,
+    adjust-color($violet, $lightness: 14%),
+    adjust-color(cyan,$lightness: -25%) 100%,
     ),
     repeating-linear-gradient(180deg,
     transparent,
