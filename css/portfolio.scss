@@ -41,10 +41,19 @@ $on-laptop: 800px;
 @charset "utf-8";
 
 
-// Import partials from `sass_dir` (defaults to `_sass`) 
-@use "module";
-@use "base";
-@use "layout";
-@use "syntax-highlighting";
+// // Import partials from `sass_dir` (defaults to `_sass`) 
+// @use "module";
+// @use "base";
+// @use "layout";
+// @use "syntax-highlighting";
 
 
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import 
+"module"
+,"base"
+,"layout"
+,"syntax-highlighting"
+;

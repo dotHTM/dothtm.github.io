@@ -35,11 +35,21 @@ $on-laptop: 800px;
 
 @charset "utf-8";
 
+// // Import partials from `sass_dir` (defaults to `_sass`)
+// @use "module";
+// @use "base";
+// @use "portfolio-layout";
+// @use "syntax-highlighting";
+
+
+
 // Import partials from `sass_dir` (defaults to `_sass`)
-@use "module";
-@use "base";
-@use "portfolio-layout";
-@use "syntax-highlighting";
+@import 
+"module"
+,"base"
+,"portfolio-layout"
+,"syntax-highlighting"
+;
 
 
 @mixin media-query($device) {
