@@ -6,7 +6,7 @@ desc: blog questions technology edition
 hidedesc: true
 ---
 
-I was [tagged](https://maple.pet/blog/blog-questions-technology-edition) by [Maple.pet](https://maple.pet) to respond follow the chain blogging quiz/getting to know you game.
+I was [tagged](https://maple.pet/blog/blog-questions-technology-edition) by [maple.pet](https://maple.pet) to respond follow the chain blogging quiz/getting to know you game.
 
 I haven't publicly blogged in a while, mostly while trying to figure out what I'm doing with this space, but it should feel good to get back in the action, update my CSS for the new SASS changes, and motivate myself to talk more about the CAD and FDM projects I've been working on.
 
