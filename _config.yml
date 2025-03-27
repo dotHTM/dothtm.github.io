@@ -21,13 +21,15 @@ markdown: kramdown
 md: kramdown
 
 exclude: 
-  - 'node_modules'
-  - 'gruntfile.js'
-  - 'config.rb'
-  - 'brokenLinks.mdown'
-  - '*.todo'
-  - 'package.json'
-  - '*.sublime-*'
+  - node_modules
+  - gruntfile.js
+  - config.rb
+  - brokenLinks.mdown
+  - package.json
+  - Makefile
+  - "*.todo"
+  - "*.sublime-*"
+  - "*.sh"
 
 logo: /image/dot_logo.png
 
