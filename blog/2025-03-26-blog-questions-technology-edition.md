@@ -77,4 +77,8 @@ The trouble is we only have so much time, and honestly it's way easier to see th
 
 ---
 
-I'm waiting on a few people to confirm if they blog, but I don't want to hold this back. I hope to be able to keep this chain on, but I'm okay if I'm just a leaf on this tree.
+A list of people who I'm tagging (links to those who've accepted):
+
+- [wildweasel](https://netizen.club/~wildweasel/blaugh/index.html)!
+- a work friend
+- an RPG/board game friend
