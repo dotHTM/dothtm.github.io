@@ -24,7 +24,7 @@ desc: Miniature dresser.
 Built out of amusement, and proved that I am aware of the important design elements of a dresser drawers.
 
 <video controls>
-    <source src="{{ '/art/video/mini_dresser_1.mov' | absolute_url }}">
+    <source src="{{ '/posts/art/video/mini_dresser_1.mov.mp4' | absolute_url }}">
 </video>
 
 Sealed with PVA, painted, and finished with beesewax.
