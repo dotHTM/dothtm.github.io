@@ -9,7 +9,7 @@
 title: dothtm.psyburr.space
 email: dothtm@icloud.com
 description: > # this means to ignore newlines until next dict key
-  
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dothtm.psyburr.space" # the base hostname & protocol for your site
 twitter_username: dothtm
@@ -20,7 +20,7 @@ mastodon_username:  '@dotHTM@mathstodon.xyz'
 markdown: kramdown
 md: kramdown
 
-exclude: 
+exclude:
   - node_modules
   - gruntfile.js
   - config.rb

@@ -28,50 +28,50 @@ $stripe-angle: 90deg+$slant_angle;
   background: repeating-linear-gradient(90deg,
     adjust-color($violet, $lightness: 4%),
     adjust-color($pink, $lightness: -50%) 100%,
-    ),
-    repeating-linear-gradient(0deg,
+  ),
+              repeating-linear-gradient(0deg,
     transparent,
     rgba(yellow, 20%) 100%,
-    );
+  );
   background-blend-mode: lighten;
 }
 
 @mixin bi_light_2 {
   background:
-    repeating-linear-gradient(0deg,
+  repeating-linear-gradient(0deg,
     adjust-color($violet, $lightness: 4%),
     adjust-color($green,$lightness: -35%) 100%,
-    ),
-    repeating-linear-gradient(-90deg,
+  ),
+  repeating-linear-gradient(-90deg,
     transparent,
     rgba($pink, 20%) 100%,
-    );
+  );
   background-blend-mode: lighten;
 }
 
 @mixin bi_light_3 {
   background:
-    repeating-linear-gradient(90deg,
+  repeating-linear-gradient(90deg,
     adjust-color($violet, $lightness: 4%),
     adjust-color(cyan,$lightness: -35%) 100%,
-    ),
-    repeating-linear-gradient(180deg,
+  ),
+  repeating-linear-gradient(180deg,
     transparent,
     rgba($pink, 20%) 100%,
-    );
+  );
   background-blend-mode: lighten;
 }
 
 @mixin bi_light_3 {
   background:
-    repeating-linear-gradient(90deg,
+  repeating-linear-gradient(90deg,
     adjust-color($violet, $lightness: 14%),
     adjust-color(cyan,$lightness: -25%) 100%,
-    ),
-    repeating-linear-gradient(180deg,
+  ),
+  repeating-linear-gradient(180deg,
     transparent,
     rgba($pink, 40%) 100%,
-    );
+  );
   background-blend-mode: lighten;
 }
 
@@ -86,8 +86,6 @@ $stripe-angle: 90deg+$slant_angle;
 
 
 .logo {
-
-
   @include logo_body;
   @include bi_light_3;
 
@@ -105,11 +103,18 @@ $stripe-angle: 90deg+$slant_angle;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-
   }
 }
 
-
 .portfolio-image{
   width: 62%;
+}
+
+.disclaimer{
+  font-size: .75rem;
+  color: cyan;
+  p{
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+  }
 }

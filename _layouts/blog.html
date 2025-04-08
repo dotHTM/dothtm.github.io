@@ -2,11 +2,11 @@
 layout: default
 default_bullet: 📓
 ---
-{% if page.desc %} 
-	{% if page.hidedesc %} 
-	{% else %} 
-		{{ page.desc | markdownify }}
-		<hr>
-	{% endif %}
-	{% endif %}
+{% if page.desc %}
+    {% if page.hidedesc %}
+    {% else %}
+        {{ page.desc | markdownify }}
+        <hr>
+    {% endif %}
+{% endif %}
 {{ content }}

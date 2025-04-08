@@ -1,41 +1,16 @@
 <header id="site-header">
   <div class="wrapper">
-    <a id="site-title" href="
-    {{ site.baseurl }}/">
+    <a id="site-title" href="{{ site.baseurl }}/">
       <span class="dot">dot</span><span class="htm">HTM</span><span class="platform">.psyburr.space</span>
     </a>
     <div id="site-bar">
-          <div id="site-desc">
-            <p>Striving to be immutable, even if useless.</p>
-          </div>
-          
-<!--        <div class="dark-mode-switch">
-        <input id="dark-mode" type="checkbox" onclick="document.documentElement.classList.toggle('dark-mode')">	
-        <label for="dark-mode">Invert Contrast</label>
+      <div id="site-desc">
+        <p>Striving to be immutable, even if useless.</p>
       </div>
- -->
-
-          <nav id="site-nav">
-            
-            {% include nav-divider.html %}
-            {% assign sorted_pages = site.pages | sort: "nav" %}
-            {% for my_page in sorted_pages %}
-            {% if my_page.nav %}
-            {% if my_page.title %}
-            <a class="page-link" href="
-            {{ my_page.url | prepend: site.baseurl }}">
-            {% if my_page.navtitle %}
-            {{ my_page.navtitle }}
-            {% else %}
-            {{ my_page.title }}
-            {% endif %}
-            </a>
-            {% include nav-divider.html %}
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-          </nav>
-          </div>
-    
+      <nav id="site-nav">{% assign sorted_pages = site.pages | sort: "nav" %}{% for my_page in sorted_pages %}{% if my_page.nav %}{% if my_page.title %}
+        <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{% if my_page.navtitle %}{{ my_page.navtitle }}{% else %}{{ my_page.title }}{% endif %}</a>{% include nav-divider.html %}{% endif %}{% endif %}{% endfor %}
+      </nav>
+    </div>
+    {% include disclaimer.html %}
   </div>
 </header>

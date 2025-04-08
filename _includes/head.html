@@ -5,15 +5,15 @@
   <title>dothtm{% if page.title %} - {{ page.title | escape }}{%else%}.psyburr.space{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   {% if page.layout == "art" or page.layout == "portfolio" %}
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   {% else %}
-  <link rel="stylesheet" href="{{ "/css/portfolio.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/portfolio.css" | prepend: site.baseurl }}">
   {% endif %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | absolute_url }}">
-  
+
   {% include head_meta_favicon.html %}
-  
+
   {% include head_meta_open_graph.html %}
-  
+
 </head>

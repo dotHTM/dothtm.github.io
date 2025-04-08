@@ -5,25 +5,35 @@ bullet:
 hide_title: true
 feed: false
 ---
-
-# Hello world
-
-Hi there.
-
-_Under construction gif dot jpeg2000_
-
 <div class="home">
+
   <ul class="post-list">
-    {% for post in site.posts %}
-    <li>
-      <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -<span class="post-meta">{{ post.date | date: site.dateformat }}</span>
-      </h2>
-      <p class="post-desc">
-        {% if post.desc %}{{post.desc}}{% endif %} <a class="post-desc" href="{{ post.url | prepend: site.baseurl }}">…</a>
-      </p>
-    </li>
+
+    {% assign doclist = site.pages | sort: 'updated' | sort: 'date' | reverse | slice: 0, 3 %}
+    {% for page in doclist %}
+
+      <li>
+        <h2>
+          <a class="post-link" href="{{ page.url | prepend: site.baseurl }}"> {% include bullet.html %} {{ page.title }}</a><br>
+          {% if page.updated %}
+            <span class="meta-updated">Updated: {{ page.updated | date: site.dateformat }}</span>
+          {% endif %}
+          {% if page.date %}
+            <span class="meta-created">Created: {{ page.date | date: site.dateformat }}</span>
+          {% endif %}
+        </h2>
+        <div class="post-content">
+          <div class="hero-image">
+            {% if page.image %}<img src="{{page.image | prepend: "/posts/art/image/"}}" alt="{{page.title}}" />{% endif %}
+
+          </div>
+          {% if page.content %}{{ page.content | markdownify }}{% endif %}
+        </div>
+      </li>
+
+
     {% endfor %}
   </ul>
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+
 </div>

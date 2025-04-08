@@ -1,0 +1,7 @@
+{%if page.bullet%}
+    {{page.bullet}}
+    {%elsif site.data.bullet[page.layout]%}
+    {{site.data.bullet[page.layout]}}
+{%else%}
+    {{site.data.bullet["default"]}}
+{%endif%}

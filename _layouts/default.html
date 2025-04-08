@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
-<body>
-  <div id="pinkbar"></div>
-  {% include header.html %}
+  {% include head.html %}
+  <body>
+    <div id="pinkbar"></div>
+    {% include header.html %}
     <div class="page-content">
       <article class="post">
         {% include post-header.html %}
@@ -12,9 +12,9 @@
             {% if layout.hide_image or page.hide_image %}
             {% else %}
               {% if page.image %}
-              <img src="{{ page.image | absoute_url }}" />
+                <img src="{{ page.image | absoute_url }}" />
               {% else if layout.default_image %}
-              <img src="{{ layout.default_image | absoute_url }}" />
+                <img src="{{ layout.default_image | absoute_url }}" />
               {% endif %}
             {% endif %}
             {{ content }}
@@ -23,6 +23,6 @@
       </article>
     </div>
     {% include footer.html %}
-  <div id="cyanbar"></div>
-</body>
+    <div id="cyanbar"></div>
+  </body>
 </html>
