@@ -9,7 +9,7 @@ Inconsistent UI across devices and mental load.
 
 # Electronics
 
-- Mostly consistant:
+- Mostly consistent:
   - left is quieter, right is louder.
   - game systems
     - pair:
@@ -17,7 +17,7 @@ Inconsistent UI across devices and mental load.
       - Valve Steam Deck
       position: on top, to the left.
       extra: headphone jack in similar location on right
-      discrepency: Steam Deck's Power button on right side
+      discrepancy: Steam Deck's Power button on right side
 
 - Apple
   - item: iPad
@@ -38,9 +38,11 @@ Inconsistent UI across devices and mental load.
     
     Since the two primary orientations switch between these two modes, A matter of a few degrees can change the behavior of these buttons, and may not be reliable when operated blindly.
     
-    If the buttons had been placed on the upper edge of the standard Portrait mode, the mode switch would only occur in the two reversed orientations, and might not have been created as a dymanic feature at all.
+    If the buttons had been placed on the upper edge of the standard Portrait mode, the mode switch would only occur in the two reversed orientations, and might not have been created as a dynamic feature at all.
     
   - item: iPhone
+    
+    Consistent with Apple Keyboards.
   
     On the left side of the screen when in portrait orientation (wired port on bottom).
     
@@ -48,7 +50,7 @@ Inconsistent UI across devices and mental load.
     
     Landscape orientation places volume buttons on bottom, to the left. 
     
-    This makes using the volume buttons as camera shutter trigger difficult. Perhaps this explains the invention of the new capacitive dedicated camera side button, now oriented in the old volume buttons' location when the camera lens is oriented upward.
+    This makes using the volume buttons as camera shutter trigger difficult. Perhaps this explains the invention of the new dedicated camera side button, now oriented in the old volume buttons' location when the camera lens is oriented upward.
     
     
 
