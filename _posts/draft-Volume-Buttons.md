@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: draft
 title:  "Volume Buttons"
-date:   draft
+date:   
 categories: blog
 ---
 

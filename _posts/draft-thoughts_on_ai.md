@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: draft
 title:  "Thoughts on AI"
 date:   
 categories: rants technology
